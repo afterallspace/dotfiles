@@ -17,14 +17,15 @@ starship init fish | source
 
 if status is-login
     if test (tty) = /dev/tty1
+        for line in (gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+            set -gx (string split -m1 "=" -- $line)
+        end
         clear
         exec start-hyprland > /dev/null 2>&1
     end
 end
 
-# pnpm
 set -gx PNPM_HOME "/home/afterall/.local/share/pnpm"
 if not string match -q -- "$PNPM_HOME/bin" $PATH
   set -gx PATH "$PNPM_HOME/bin" $PATH
 end
-# pnpm end

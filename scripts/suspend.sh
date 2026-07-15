@@ -2,7 +2,7 @@
 
 NET_THRESHOLD_KB=1000
 DISK_THRESHOLD_KB=5000
-CPU_THRESHOLD_PERCENT=20
+CPU_THRESHOLD_PERCENT=35
 GPU_THRESHOLD_PERCENT=15
 
 while true; do
@@ -12,8 +12,8 @@ while true; do
     fi
 
     net_start=$(cat /sys/class/net/[ew]*/statistics/*x_bytes 2>/dev/null | awk '{s+=$1} END {print s}')
-    disk_start=$(awk '/sd|nvme/ {s+=$6+$10} END {print s}' /proc/diskstats 2>/dev/null)
-    
+    disk_start=$(awk '$3 ~ /^(sd[a-z]+|nvme[0-9]+n[0-9]+)$/ {s+=$6+$10} END {print s}' /proc/diskstats 2>/dev/null)
+
     read cpu user nice system idle iowait irq softirq steal guest guest_nice < /proc/stat
     cpu_total_start=$((user+nice+system+idle+iowait+irq+softirq+steal))
     cpu_idle_start=$idle
@@ -24,8 +24,8 @@ while true; do
     sleep 5
 
     net_end=$(cat /sys/class/net/[ew]*/statistics/*x_bytes 2>/dev/null | awk '{s+=$1} END {print s}')
-    disk_end=$(awk '/sd|nvme/ {s+=$6+$10} END {print s}' /proc/diskstats 2>/dev/null)
-    
+    disk_end=$(awk '$3 ~ /^(sd[a-z]+|nvme[0-9]+n[0-9]+)$/ {s+=$6+$10} END {print s}' /proc/diskstats 2>/dev/null)
+
     read cpu user nice system idle iowait irq softirq steal guest guest_nice < /proc/stat
     cpu_total_end=$((user+nice+system+idle+iowait+irq+softirq+steal))
     cpu_idle_end=$idle
@@ -38,7 +38,7 @@ while true; do
 
     cpu_total_diff=$((cpu_total_end - cpu_total_start))
     cpu_idle_diff=$((cpu_idle_end - cpu_idle_start))
-    
+
     if [ "$cpu_total_diff" -gt 0 ]; then
         cpu_usage=$(( 100 * (cpu_total_diff - cpu_idle_diff) / cpu_total_diff ))
     else
