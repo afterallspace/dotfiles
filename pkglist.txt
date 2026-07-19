@@ -1,228 +1,241 @@
-a2ps
-accountsservice
-acpi_call-dkms
-ags-hyprpanel-git
-alsa-firmware
-alsa-plugins
-alsa-utils
-aquamarine
-base
-base-devel
-bash-completion
-bibata-cursor-theme-bin
-bluez
-bluez-hid2hci
-bluez-libs
-bluez-obex
-bluez-utils
-brave-bin
-brightnessctl
-btop
-btrfs-progs
-bun
-cachyos-fish-config
-cachyos-hooks
-cachyos-kernel-manager
-cachyos-keyring
-cachyos-mirrorlist
-cachyos-plymouth-bootanimation
-cachyos-rate-mirrors
-cachyos-settings
-cachyos-v3-mirrorlist
-cachyos-v4-mirrorlist
-chwd
-cryptsetup
-cups
-cursor-bin
-device-mapper
-diffutils
-discord
-dmidecode
-dnsmasq
-dosfstools
-dunst
-e2fsprogs
-easyeffects
-efibootmgr
-efitools
-egl-wayland
-elephant-all
-ethtool
-exfatprogs
-fastfetch
-fatrace
-ffmpegthumbnailer
-fnm
-foomatic-db-gutenprint-ppds
-fragments
-gamemode
-gamescope
-ghostscript
-git
-gitflow-avh
-gjs
-glycin-gtk4
-gnome-disk-utility
-gobject-introspection
-grim
-grimblast-git
-gsfonts
-gst-libav
-gst-plugin-pipewire
-gst-plugin-va
-gst-plugins-bad
-gst-plugins-good
-gst-plugins-ugly
-gutenprint
-gvfs-mtp
-handbrake
-hdparm
-hyprcursor
-hyprgraphics
-hypridle
-hyprland
-hyprland-guiutils
-hyprland-per-window-layout
-hyprlang
-hyprlock
-hyprpicker
-hyprpolkitagent
-hyprsunset
-hyprtoolkit
-hyprutils
-impala
-inetutils
-inotify-tools
-intel-media-driver
-intel-ucode
-iptables
-iwd
-iwgtk
-kitty
-less
-lib32-nvidia-utils
-lib32-opencl-nvidia
-lib32-vulkan-icd-loader
-lib32-vulkan-intel
-libgsf
-libopenraw
-libva-nvidia-driver
-linux-cachyos
-linux-cachyos-headers
-linux-cachyos-lts
-linux-cachyos-lts-headers
-linux-cachyos-lts-nvidia-open
-linux-cachyos-nvidia-open
-linux-firmware
-logrotate
-loupe
-lsb-release
-lvm2
-man-db
-man-pages
-matugen-bin
-mdadm
-meld
-mesa-utils
-mkinitcpio
-mkvtoolnix-gui
-msr-tools
-mtools
-mullvad-vpn
-nano
-nano-syntax-highlighting
-nautilus
-netctl
-network-manager-applet
-networkmanager
-nm-connection-editor
-noto-fonts
-noto-fonts-cjk
-noto-fonts-emoji
-noto-fonts-extra
-nss-mdns
-ntfs-3g
-nvidia-prime
-nvidia-settings
-nvidia-utils
-onlyoffice-bin
-opencl-nvidia
-openssh
-os-prober
-overskride
-pacman-contrib
-pamixer
-papers
-paru
-pavucontrol
-perl
-pipewire-alsa
-pipewire-pulse
-pkgfile
-playerctl
-plocate
-plymouth
-poppler-glib
-power-profiles-daemon
-pv
-python
-python-gpustat
-python-packaging
-python-pywal
-qt5-declarative
-qt5-graphicaleffects
-qt5-svg
-qt6-5compat
-rebuild-detector
-ripgrep
-rsync
-satty
-sg3_utils
-showtime-git
-slurp
-smartmontools
-socat
-sof-firmware
-spotify
-starship
-steam
-sudo
-swaybg
-switcheroo-control
-sysfsutils
-system-config-printer
-systemd-boot-manager
-telegram-desktop
-texinfo
-ttf-dejavu
-ttf-jetbrains-mono-nerd
-ttf-nerd-fonts-symbols
-ttf-nerd-fonts-symbols-mono
-ttf-ubuntu-font-family
-ttf-ubuntu-mono-nerd
-ttf-ubuntu-nerd
-ufw
-ufw-extras
-unrar
-unzip
-upower
-usb_modeswitch
-usbutils
-visual-studio-code-bin
-vpl-gpu-rt
-vulkan-icd-loader
-vulkan-intel
-walker
-wget
-which
-wireplumber
-wl-clipboard
-wl-screenrec-git
-wpa_supplicant
-wtype
-xdg-desktop-portal-gnome
-xdg-desktop-portal-gtk
-xdg-desktop-portal-hyprland
-xdg-user-dirs
-xdg-utils
-xorg-xwayland
+a2ps 4.15.8-1
+accountsservice 26.27.3-1.1
+acpi_call-dkms 1.2.2-3
+ags-hyprpanel-git r629.e919b4a-1
+alsa-firmware 1.2.4-4
+alsa-plugins 1:1.2.12-5.1
+alsa-utils 1.2.16-1.1
+aquamarine 0.12.1-1.1
+base 3-3
+base-devel 1-2
+bash-completion 2.18.0-1
+bibata-cursor-theme-bin 2.0.7-1
+bluez 5.87-2.1
+bluez-hid2hci 5.87-2.1
+bluez-libs 5.87-2.1
+bluez-obex 5.87-2.1
+bluez-utils 5.87-2.1
+brave-bin 1:1.92.141-1
+brightnessctl 0.5.1-3
+bruno-bin 3.5.1-1
+btop 1.4.7-1.1
+btrfs-progs 7.1-1
+bun 1.3.14-1
+cachyos-fish-config 16-1
+cachyos-hooks 2026.02.05-1
+cachyos-kernel-manager 1.19.0-1
+cachyos-keyring 20240331-1
+cachyos-mirrorlist 27-1
+cachyos-plymouth-bootanimation 2-3
+cachyos-rate-mirrors 23-3
+cachyos-settings 1:1.3.5-2
+cachyos-v3-mirrorlist 27-1
+cachyos-v4-mirrorlist 27-1
+chwd 1.24.1-1
+claude-desktop 1.22209.0-1
+cryptsetup 2.8.6-1.1
+cups 2:2.4.19-1
+cursor-bin 3.12.17-1
+device-mapper 2.03.41-1.1
+diffutils 3.12-2.1
+discord 1:1.0.149-1
+dmidecode 3.7-1
+dnsmasq 2.93-1.1
+dosfstools 4.2-5.1
+downgrade 12.0.2-1
+dunst 1.13.2-1.1
+e2fsprogs 1.47.4-1.1
+easyeffects 8.2.7-1.1
+efibootmgr 18-4.1
+efitools 1.9.2-7.1
+egl-wayland 4:1.1.21-1.1
+elephant-all 2.22.0-1
+ethtool 1:7.1-1.1
+exfatprogs 1.4.2-1.1
+fastfetch 2.66.0-1.1
+fatrace 0.19.1-1
+ffmpegthumbnailer 2.3.0-1.1
+fnm 1.39.0-1.1
+foomatic-db-gutenprint-ppds 5.3.5-1.1
+fragments 3.0.1-4.1
+gamemode 1.8.2-3.1
+gamescope 3.16.24-1
+ghostscript 10.07.1-1.1
+git 2.55.0-1.1
+gitflow-avh 1.12.3-1
+gjs 2:1.88.1-1.1
+glycin-gtk4 2.1.5-2.1
+gnome-disk-utility 46.1-2.2
+gnome-keyring 1:50.0-1.1
+gobject-introspection 1.86.0-2.1
+grim 1.5.0-2.1
+grimblast-git r163.1f71628-1
+gsfonts 20200910-6
+gst-libav 1.28.5-2.1
+gst-plugin-pipewire 1:1.6.8-1.1
+gst-plugin-va 1.28.5-2.1
+gst-plugins-bad 1.28.5-2.1
+gst-plugins-good 1.28.5-2.1
+gst-plugins-ugly 1.28.5-2.1
+gutenprint 5.3.5-1.1
+gvfs-mtp 1.60.1-1
+handbrake 1.11.2-1.1
+hdparm 9.65-3.1
+hivex 1.3.24-8.1
+hyprcursor 0.1.13-6.1
+hyprgraphics 0.5.1-3.1
+hypridle 0.1.7-9.1
+hyprland 0.55.4-1.1
+hyprland-guiutils 0.2.1-6.1
+hyprland-per-window-layout 2.17-1
+hyprlang 0.6.8-4.1
+hyprlock 0.9.5-4.1
+hyprpicker 0.4.7-1.1
+hyprpolkitagent 0.1.3-7.1
+hyprsunset 0.4.0-2.1
+hyprtoolkit 0.5.4-2.1
+hyprutils 0.13.1-1.1
+impala 0.7.4-1.1
+inetutils 2.8-1.1
+inotify-tools 4.25.9.0-1.1
+intel-media-driver 26.1.5-1.1
+intel-ucode 20260512-1
+iptables 1:1.8.13-1.1
+iwd 3.12-1.1
+iwgtk 0.9-1
+kitty 0.47.4-1.1
+less 1:704-1.1
+lib32-nvidia-utils 610.43.03-1
+lib32-opencl-nvidia 610.43.03-1
+lib32-vulkan-icd-loader 1.4.350.1-1
+lib32-vulkan-intel 3:26.1.5-1
+libgsf 1.14.58-1.1
+libopenraw 0.3.7-2.1
+libva-nvidia-driver 0.0.17-1.1
+linux-cachyos 7.1.3-2
+linux-cachyos-headers 7.1.3-2
+linux-cachyos-lts 6.18.38-2
+linux-cachyos-lts-headers 6.18.38-2
+linux-cachyos-lts-nvidia-open 6.18.38-2
+linux-cachyos-nvidia-open 7.1.3-2
+linux-firmware 1:20260622-1
+logrotate 3.22.0-1.1
+loupe 50.0-1.1
+lsb-release 2.0.r55.a25a4fc-1
+lvm2 2.03.41-1.1
+man-db 2.13.1-2.1
+man-pages 6.18-1
+matugen-bin 4.1.0-1
+mdadm 4.6-2
+mediainfo 26.05-1.1
+meld 3.24.0-1
+mesa-utils 9.0.0-7.1
+mkinitcpio 41-5
+mkvtoolnix-gui 100.0-1
+mpv 1:0.41.0-3.1
+msr-tools 1.3-4
+mtools 1:4.0.49-1.1
+mullvad-vpn 2026.3-1.1
+nano 9.1-1.1
+nano-syntax-highlighting 2025.07.01.r0.g256995b-2
+nautilus 50.2.2-1
+netctl 1.29-2
+network-manager-applet 1.36.0-2.1
+networkmanager 1.56.1-2
+nm-connection-editor 1.36.0-2.1
+noto-fonts 1:2026.07.01-1
+noto-fonts-cjk 20240730-1
+noto-fonts-emoji 1:2.051-1
+noto-fonts-extra 1:2026.07.01-1
+nss-mdns 0.15.1-2.1
+ntfs-3g 2026.7.7-1.1
+ntfsprogs 2026.7.7-1.1
+nvidia-prime 1.0-6
+nvidia-settings 610.43.03-1
+nvidia-utils 610.43.03-1
+nwg-displays 0.4.3-1
+onlyoffice-bin 9.4.0-1
+opencl-nvidia 610.43.03-1
+openssh 10.4p1-2.1
+os-prober 1.84-1.1
+overskride 0.6.6-1
+pacman-contrib 1.13.1-1.2
+pamixer 1.6-4.1
+papers 50.2-1.1
+paru 2.1.0-3
+pavucontrol 1:6.2-1.1
+perl 5.42.2-1.1
+pipewire-alsa 1:1.6.8-1.1
+pipewire-pulse 1:1.6.8-1.1
+pkgfile 25-2.1
+playerctl 2.4.1-5.1
+plocate 1.1.24-1.1
+plymouth 26.134.222-2.1
+poppler-glib 26.07.0-1.1
+power-profiles-daemon 0.30-3
+pv 1.11.0-1.1
+python 3.14.6-2
+python-gpustat 1:1.1.1-1
+python-packaging 26.2-1
+python-pywal 3.3.0-11
+qt5-declarative 5.15.19+kde+r23-1.1
+qt5-graphicaleffects 5.15.19-1.1
+qt5-svg 5.15.19+kde+r5-1.1
+qt6-5compat 6.11.1-1.1
+rebuild-detector 4.4.5-1
+ripgrep 15.1.0-2
+rsync 3.4.4-1.1
+satty 0.21.1-1.1
+sg3_utils 1.48-1.2
+shotcut 26.6.25-1.1
+showtime-git 50.0.r23.g6df538f-1
+simple-scan 50.0-1.1
+slurp 1.5.0-2.1
+smartmontools 7.5-1.1
+socat 1.8.1.3-1.1
+sof-firmware 2025.12.2-1
+spotify 1:1.2.92.147-1
+starship 1.26.0-1
+steam 1.0.0.86-2
+sudo 1.9.17.p2-6.1
+swaybg 1.2.2-1.1
+switcheroo-control 3.0-1.1
+sysfsutils 2.1.1-2.2
+system-config-printer 1.5.18-6
+systemd-boot-manager 19-2
+telegram-desktop 7.0.1-1.1
+texinfo 7.3-1.1
+timeshift 25.12.4-1.2
+timeshift-autosnap 0.10.0-1
+ttf-dejavu 2.37+18+g9b5d1b2f-8
+ttf-jetbrains-mono-nerd 3.4.0-2
+ttf-nerd-fonts-symbols 3.4.0-1
+ttf-nerd-fonts-symbols-mono 3.4.0-1
+ttf-ubuntu-font-family 1:0.83-2
+ttf-ubuntu-mono-nerd 3.4.0-2
+ttf-ubuntu-nerd 3.4.0-2
+ufw 0.36.2-7
+ufw-extras 1.2.0-1
+unrar 1:7.2.7-1.1
+unzip 6.0-23.1
+upower 1.91.3-1.1
+usb_modeswitch 2.6.2.20251207-1.1
+usbutils 019-1.1
+visual-studio-code-bin 1.129.1-1
+vpl-gpu-rt 26.1.5-1.1
+vulkan-icd-loader 1.4.350.1-1.1
+vulkan-intel 3:26.1.5-1
+walker 2.16.2-1
+wget 1.25.0-6.1
+which 2.25-1.1
+wireplumber 0.5.15-1.1
+wl-clipboard 1:2.3.0-1.1
+wl-screenrec-git r355.0925290-1
+wpa_supplicant 2:2.11-5.1
+wtype 0.4-2.2
+xdg-desktop-portal-gnome 50.0-1.1
+xdg-desktop-portal-gtk 1.15.3-1.1
+xdg-desktop-portal-hyprland 1.3.12-2.1
+xdg-user-dirs 0.20-1.1
+xdg-utils 1.2.1-2
+xorg-xwayland 24.1.13-1.1
