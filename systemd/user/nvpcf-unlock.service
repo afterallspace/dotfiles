@@ -1,0 +1,16 @@
+# GPU boost-clock unlock at session start (Xiaomi Book Pro 16 2022 / RTX 2050).
+# Enable:  systemctl --user daemon-reload && systemctl --user enable nvpcf-unlock.service
+# Status:  systemctl --user status nvpcf-unlock   |   tail ~/.config/debug/gpu/unlock.log
+# Full docs: ~/.config/debug/gpu/OPERATIONS.md
+[Unit]
+Description=RTX 2050 boost-clock unlock (Xiaomi NVPCF/EC workaround)
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+TimeoutStartSec=240
+ExecStartPre=/usr/bin/sleep 15
+ExecStart=%h/.config/debug/gpu/nvpcf-session-unlock.sh
+
+[Install]
+WantedBy=graphical-session.target
