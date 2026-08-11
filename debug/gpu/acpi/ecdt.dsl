@@ -1,0 +1,50 @@
+/*
+ * Intel ACPI Component Architecture
+ * AML/ASL+ Disassembler version 20251212 (64-bit version)
+ * Copyright (c) 2000 - 2025 Intel Corporation
+ * 
+ * Disassembly of ecdt.dat
+ *
+ * ACPI Data Table [ECDT]
+ *
+ * Format: [HexOffset DecimalOffset ByteLength]  FieldName : FieldValue (in hex)
+ */
+
+[000h 0000 004h]                   Signature : "ECDT"    [Embedded Controller Boot Resources Table]
+[004h 0004 004h]                Table Length : 00000069
+[008h 0008 001h]                    Revision : 01
+[009h 0009 001h]                    Checksum : 91
+[00Ah 0010 006h]                      Oem ID : "XMCC  "
+[010h 0016 008h]                Oem Table ID : "XMCC2121"
+[018h 0024 004h]                Oem Revision : 00000002
+[01Ch 0028 004h]             Asl Compiler ID : "ACPI"
+[020h 0032 004h]       Asl Compiler Revision : 00040000
+
+
+[024h 0036 00Ch]     Command/Status Register : [Generic Address Structure]
+[024h 0036 001h]                    Space ID : 01 [SystemIO]
+[025h 0037 001h]                   Bit Width : 08
+[026h 0038 001h]                  Bit Offset : 00
+[027h 0039 001h]        Encoded Access Width : 00 [Undefined/Legacy]
+[028h 0040 008h]                     Address : 0000000000000066
+
+[030h 0048 00Ch]               Data Register : [Generic Address Structure]
+[030h 0048 001h]                    Space ID : 01 [SystemIO]
+[031h 0049 001h]                   Bit Width : 08
+[032h 0050 001h]                  Bit Offset : 00
+[033h 0051 001h]        Encoded Access Width : 00 [Undefined/Legacy]
+[034h 0052 008h]                     Address : 0000000000000062
+
+[03Ch 0060 004h]                         UID : 00000001
+[040h 0064 001h]                  GPE Number : 6E
+[041h 0065 014h]                    Namepath : "\_SB.PC00.LPCB.H_EC"
+
+Raw Table Data: Length 105 (0x69)
+
+    0000: 45 43 44 54 69 00 00 00 01 91 58 4D 43 43 20 20  // ECDTi.....XMCC  
+    0010: 58 4D 43 43 32 31 32 31 02 00 00 00 41 43 50 49  // XMCC2121....ACPI
+    0020: 00 00 04 00 01 08 00 00 66 00 00 00 00 00 00 00  // ........f.......
+    0030: 01 08 00 00 62 00 00 00 00 00 00 00 01 00 00 00  // ....b...........
+    0040: 6E 5C 5F 53 42 2E 50 43 30 30 2E 4C 50 43 42 2E  // n\_SB.PC00.LPCB.
+    0050: 48 5F 45 43 00 00 00 00 00 00 00 00 00 00 00 00  // H_EC............
+    0060: 00 00 00 00 00 00 00 00 00                       // .........
