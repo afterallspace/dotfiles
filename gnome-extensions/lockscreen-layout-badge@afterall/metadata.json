@@ -1,0 +1,8 @@
+{
+  "uuid": "lockscreen-layout-badge@afterall",
+  "name": "Lockscreen Layout Badge",
+  "description": "Custom Unicode labels for the keyboard layout indicator that survive the lock screen",
+  "shell-version": ["50"],
+  "session-modes": ["user", "unlock-dialog"],
+  "url": ""
+}

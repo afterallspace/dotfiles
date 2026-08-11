@@ -1,0 +1,7 @@
+{
+  "uuid": "gsr-timer@afterall",
+  "name": "GSR Recording Indicator",
+  "description": "Native-looking recording indicator for gpu-screen-recorder. Shows elapsed time in the panel and stops the recording when clicked. Hides GNOME's own screen-sharing indicator while recording.",
+  "shell-version": ["48", "49", "50"],
+  "version": 2
+}
