@@ -1,0 +1,3 @@
+timestamp,elapsed_s,energy_wh,power_w,voltage_v,capacity_pct,status,integral_wh
+2026-08-03T10:52:03+05:00,10,40.522,7.01,8.252,95,Charging,0.0195
+2026-08-03T10:52:13+05:00,20,40.545,7.00,8.257,95,Charging,0.0390
