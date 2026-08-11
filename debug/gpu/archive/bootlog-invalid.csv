@@ -1,0 +1,11 @@
+date,verdict,gpu_w_avg,gpu_w_max,cpu_load,wmi_driver,drm_order,kernel,boot_id
+2026-07-21T14:37:52+05:00,BAD,9.6,10.96,81,redmi-wmi,i915-first,7.1.3-2-cachyos,f86729a5fbd74790901e32da7993ebbf
+2026-07-21T14:46:55+05:00,BAD,10.0,10.94,78,bitland-mifs-wmi,i915-first,7.1.3-2-cachyos,92d329ea6f484012bb10031fba118d8b
+2026-07-21T14:52:44+05:00,BAD,9.4,11.03,86,bitland-mifs-wmi,i915-first,7.1.3-2-cachyos,684fdbfbd9c04bda92e920f97eaedccd
+2026-07-21T15:00:12+05:00,BAD,9.4,11.00,86,+5190,nvidia-first,bitland-mifs-wmi,7.1.3-2-cachyos,449e8e5994f948cd902a8188a7b0fa83
+2026-07-21T15:10:36+05:00,BAD,9.6,10.74,76,+320,nvidia-first,redmi-wmi,7.1.3-2-cachyos,7f73dec0df414d0d8e7953442c56d7fd
+2026-07-21T15:33:18+05:00,BAD,9.8,11.22,83,-23,i915-first,bitland-mifs-wmi,7.1.3-2-cachyos,6cfca8652e7f4822ae175740962a98ab
+2026-07-21T15:56:30+05:00,BAD,10.1,11.32,82,-32,i915-first,redmi-wmi,7.1.3-2-cachyos,ae2eb80313a6403faabd19f5af0377e7
+2026-07-21T15:56:58+05:00,BAD,9.8,11.30,82,-32,i915-first,redmi-wmi,7.1.3-2-cachyos,ae2eb80313a6403faabd19f5af0377e7
+2026-07-21T15:59:40+05:00,BAD,10.1,11.14,80,-22,i915-first,redmi-wmi,7.1.3-2-cachyos,7107993f03a34368a1bc504dc72ef2ec
+2026-07-21T16:01:07+05:00,BAD,9.9,11.18,83,+371,nvidia-first,redmi-wmi,7.1.3-2-cachyos,35287266f0ce48af86ae6ef77b2991ff

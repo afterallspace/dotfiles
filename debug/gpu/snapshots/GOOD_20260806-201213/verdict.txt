@@ -1,0 +1,4 @@
+verdict: GOOD | GPU 32.3 W avg, 33.30 max | 1720 MHz | load 89 %
+battery: Not charging 100%, 0.0 W | profile: balanced | RTD3: Enabled (fine-grained) | gap: +2 ms | WMI: redmi-wmi
+kernel: 7.1.6-1-cachyos | boot_id: b59dd78e28324e638c36ee99c02c9af3
+cmdline: initrd=\initramfs-linux-cachyos.img root=UUID=c7f63d6d-d09b-4558-82ea-2900970dceb7 rw rootflags=subvol=/@ zswap.enabled=0 nowatchdog quiet splash

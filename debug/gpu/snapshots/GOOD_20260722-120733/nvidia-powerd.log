@@ -1,0 +1,16 @@
+Jul 22 12:06:18 space systemd[1]: Started nvidia-powerd service.
+Jul 22 12:06:18 space nvidia-powerd[696]: nvidia-powerd version:2.0 (build 1)
+Jul 22 12:06:18 space nvidia-powerd[696]: DBus Connection is established
+Jul 22 12:06:18 space nvidia-powerd[696]: ERROR! DC power limits table is not supported
+Jul 22 12:06:18 space nvidia-powerd[696]: ERROR! Failed to get SysPwrLimitGetInfo!!
+Jul 22 12:06:18 space nvidia-powerd[696]: ERROR! Client (presumably SBIOS) has requested to disable Dynamic Boost DC controller
+Jul 22 12:06:18 space nvidia-powerd[696]: CRITICAL! Failed to get SysPwrLimitGetInfo
+Jul 22 12:06:18 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 12:06:25 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 12:06:32 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 12:06:34 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 12:06:46 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 12:07:00 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 12:07:04 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 12:07:06 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 12:07:10 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.

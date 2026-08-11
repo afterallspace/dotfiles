@@ -1,0 +1,17 @@
+=== 2026-07-21T13:44:16+05:00 tag=inside-clean ===
+--- kernel: 7.1.3-2-cachyos
+--- platform_profile: balanced
+--- governor: performance  epp: performance
+--- no_turbo: 0  max_perf_pct: 100
+--- RAPL limits:
+    package-0 / long_term = 52000000 uW
+    package-0 / short_term = 64000000 uW
+    package-0 / peak_power = 140000000 uW
+    core / long_term = 0 uW
+    uncore / long_term = 0 uW
+    psys / long_term = 56000000 uW
+    psys / short_term = 56000000 uW
+--- battery: Not charging 100% power_now=0 uW
+--- AC online: 1
+--- nvidia power limit: 35.00 W, 50.00 W
+--- pcie: gen 2.5 GT/s PCIe width x4

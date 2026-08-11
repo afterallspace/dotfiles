@@ -1,0 +1,48 @@
+Jul 22 19:44:21 space systemd[1]: Started nvidia-powerd service.
+Jul 22 19:44:21 space nvidia-powerd[702]: nvidia-powerd version:2.0 (build 1)
+Jul 22 19:44:21 space nvidia-powerd[702]: DBus Connection is established
+Jul 22 19:44:21 space nvidia-powerd[702]: ERROR! DC power limits table is not supported
+Jul 22 19:44:21 space nvidia-powerd[702]: ERROR! Failed to get SysPwrLimitGetInfo!!
+Jul 22 19:44:21 space nvidia-powerd[702]: ERROR! Client (presumably SBIOS) has requested to disable Dynamic Boost DC controller
+Jul 22 19:44:21 space nvidia-powerd[702]: CRITICAL! Failed to get SysPwrLimitGetInfo
+Jul 22 19:44:21 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:44:28 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:44:38 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:44:53 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:44:57 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:44:58 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:45:31 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:45:33 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:45:33 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:47:16 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:47:16 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:47:19 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:47:24 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:47:24 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:50:34 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:50:39 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:51:05 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:51:09 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:51:10 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:51:18 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:51:18 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:58:11 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:58:27 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:58:28 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:58:30 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:59:07 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:59:09 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:59:16 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:59:16 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:59:19 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:59:20 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:59:20 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:59:57 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 19:59:58 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 20:14:29 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 20:14:40 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 20:15:16 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 20:15:16 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 20:20:37 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 20:20:38 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 20:20:53 space nvidia-powerd[702]: ERROR! JPAC is not created/already destroyed, ignoring request.

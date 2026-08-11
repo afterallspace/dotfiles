@@ -1,0 +1,12 @@
+Jul 22 07:59:35 space systemd[1]: Started nvidia-powerd service.
+Jul 22 07:59:35 space nvidia-powerd[695]: nvidia-powerd version:2.0 (build 1)
+Jul 22 07:59:35 space nvidia-powerd[695]: DBus Connection is established
+Jul 22 07:59:35 space nvidia-powerd[695]: ERROR! DC power limits table is not supported
+Jul 22 07:59:35 space nvidia-powerd[695]: ERROR! Failed to get SysPwrLimitGetInfo!!
+Jul 22 07:59:35 space nvidia-powerd[695]: CRITICAL! Failed to get SysPwrLimitGetInfo
+Jul 22 07:59:35 space nvidia-powerd[695]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 07:59:42 space nvidia-powerd[695]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 07:59:44 space nvidia-powerd[695]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 07:59:45 space nvidia-powerd[695]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 07:59:47 space nvidia-powerd[695]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 08:00:14 space nvidia-powerd[695]: ERROR! JPAC is not created/already destroyed, ignoring request.

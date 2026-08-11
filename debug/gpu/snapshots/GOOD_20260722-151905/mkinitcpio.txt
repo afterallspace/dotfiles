@@ -1,0 +1,2 @@
+MODULES=()
+HOOKS=(base systemd autodetect microcode kms modconf block keyboard sd-vconsole plymouth filesystems)

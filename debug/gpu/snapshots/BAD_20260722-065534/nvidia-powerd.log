@@ -1,0 +1,22 @@
+Jul 22 06:54:07 space systemd[1]: Started nvidia-powerd service.
+Jul 22 06:54:07 space nvidia-powerd[696]: nvidia-powerd version:2.0 (build 1)
+Jul 22 06:54:07 space nvidia-powerd[696]: DBus Connection is established
+Jul 22 06:54:07 space nvidia-powerd[696]: ERROR! DC power limits table is not supported
+Jul 22 06:54:07 space nvidia-powerd[696]: ERROR! Failed to get SysPwrLimitGetInfo!!
+Jul 22 06:54:07 space nvidia-powerd[696]: ERROR! Client (presumably SBIOS) has requested to disable Dynamic Boost DC controller
+Jul 22 06:54:07 space nvidia-powerd[696]: CRITICAL! Failed to get SysPwrLimitGetInfo
+Jul 22 06:54:07 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:14 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:19 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:19 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:21 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:36 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:36 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:36 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:37 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:38 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:46 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:48 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:50 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:54:52 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
+Jul 22 06:55:12 space nvidia-powerd[696]: ERROR! JPAC is not created/already destroyed, ignoring request.
