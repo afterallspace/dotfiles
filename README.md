@@ -62,7 +62,7 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
 ## 📁 Structure
 
 - `fish/` — shell config, `fnm`/`pnpm` paths, `fastfetch` greeting.
-- `ghostty/`, `fontconfig/`, `gtk-3.0/`, `btop/` — terminal and UI styling.
+- `ghostty/`, `fontconfig/` — terminal and UI styling.
 - `fastfetch/` — fetch config and the banner image above.
 - `scripts/` — utility scripts. `gamemode-tweaks.sh` locks GPU clocks during
   games; it is `chattr +i` locked because sudoers points at it directly.
