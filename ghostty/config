@@ -1,0 +1,11 @@
+window-width  = 98
+window-height = 33
+
+font-family = UbuntuMono Nerd Font Mono
+font-size   = 12
+
+window-padding-x       = 16
+window-padding-y       = 16
+window-padding-balance = true
+
+font-codepoint-map = U+2139,U+2713-U+2718,U+25C6-U+25C7,U+26A0-U+26A1,U+2794-U+279C=Adwaita Mono
