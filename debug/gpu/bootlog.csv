@@ -40,3 +40,4 @@ date,verdict,gpu_w_avg,gpu_w_max,mhz,load,battery,rtd3,gap_ms,wmi,kernel,boot_id
 2026-08-03T10:10:53+05:00,GOOD,32.3,33.13,1729,87,"Charging 77%",Disabled,+414,redmi-wmi,7.1.5-1-cachyos,5702e34d42b442629457716cfe946df0,16.5,balanced
 2026-08-03T14:20:19+05:00,GOOD,31.5,32.50,1731,87,"Charging 11%",Enabled (fine-grained),+322,bitland-mifs-wmi,7.1.5-1-cachyos,0d669edcf2304eb1be45db433433dc33,32.4,balanced
 2026-08-06T20:12:13+05:00,GOOD,32.3,33.30,1720,89,"Not charging 100%",Enabled (fine-grained),+2,redmi-wmi,7.1.6-1-cachyos,b59dd78e28324e638c36ee99c02c9af3,0.0,balanced
+2026-08-12T20:02:57+05:00,GOOD,30.2,33.45,1732,77,"Discharging 85%",Enabled (fine-grained),+528,redmi-wmi,7.1.8-1-cachyos,b1247725bb4c4d86b48e7de493b7c23a,48.0,balanced
