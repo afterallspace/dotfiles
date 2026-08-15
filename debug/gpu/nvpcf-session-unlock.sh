@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 # Session-start GPU unlock (user unit nvpcf-unlock.service): checks whether
 # boost clocks are forbidden and, if so, runs the proven unlock sequence via
-# /usr/local/bin/nvpcf-boot-fix.sh (sudoers NOPASSWD). Log: ~/.config/debug/gpu/unlock.log
+# /usr/local/bin/nvpcf-boot-fix.sh (sudoers NOPASSWD).
+#
+# Output goes to the journal only (investigation closed 15.08.2026, file
+# logging retired): journalctl --user -u nvpcf-unlock.service
 #
 # Verdict is based on CLOCKS, not watts: locked = SM capped at ~1327 MHz,
 # free = 1600+ MHz under load. Watts depend on the power source (battery,
 # hungry charger, PSYS budget) and lie; the clock signature does not.
 # Up to 3 unlock attempts.
-exec >> "$HOME/.config/debug/gpu/unlock.log" 2>&1
 echo "=== $(date -Is) session unlock ==="
 echo "battery: $(cat /sys/class/power_supply/BAT0/status 2>/dev/null) \
 $(cat /sys/class/power_supply/BAT0/capacity 2>/dev/null)%, \

@@ -1,4 +1,0 @@
-verdict: BAD | GPU 17.0 W avg, 17.41 max | 1327 MHz | load 95 %
-battery: Charging 86%, 12.2 W | profile: ? | RTD3: Disabled | gap: +321 ms | WMI: bitland-mifs-wmi
-kernel: 7.1.3-2-cachyos | boot_id: 9d7c1fdd626f47cf8bb3023a01dd4b67
-cmdline: initrd=\initramfs-linux-cachyos.img root=UUID=c7f63d6d-d09b-4558-82ea-2900970dceb7 rw rootflags=subvol=/@ zswap.enabled=0 nowatchdog quiet splash nvidia.NVreg_DynamicPowerManagement=0

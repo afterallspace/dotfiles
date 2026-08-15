@@ -1,7 +1,0 @@
-Jul 22 07:43:11 space systemd[1]: Started nvidia-powerd service.
-Jul 22 07:43:11 space nvidia-powerd[702]: nvidia-powerd version:2.0 (build 1)
-Jul 22 07:43:11 space nvidia-powerd[702]: DBus Connection is established
-Jul 22 07:43:11 space nvidia-powerd[702]: ERROR! SBIOS support not found for NVPCF GET_SUPPORTED function, exiting !!
-Jul 22 07:43:11 space nvidia-powerd[702]: ERROR! Error in getting the NvPCF static configuration
-Jul 22 07:43:11 space nvidia-powerd[702]: Quit successfully
-Jul 22 07:43:11 space systemd[1]: nvidia-powerd.service: Deactivated successfully.

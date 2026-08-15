@@ -1,4 +1,0 @@
-verdict: BAD | GPU 16.8 W avg, 16.98 max | 1287 MHz | load 96 %
-battery: Charging 97% | RTD3: Disabled | gap: -33 ms | WMI: redmi-wmi
-kernel: 7.1.3-2-cachyos | boot_id: f3f8390c632b48ef8155bc0062dc6337
-cmdline: initrd=\initramfs-linux-cachyos.img root=UUID=c7f63d6d-d09b-4558-82ea-2900970dceb7 rw rootflags=subvol=/@ zswap.enabled=0 nowatchdog quiet splash nvidia.NVreg_DynamicPowerManagement=0
