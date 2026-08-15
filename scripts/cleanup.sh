@@ -68,6 +68,14 @@ drop_idle() {
   if pgrep -x "$1" >/dev/null 2>&1; then skip "$1 is running — skipped"; else drop "$2" "${3:-}"; fi
 }
 
+# Cache subdirectories inside a Chromium-family profile dir, removed only
+# while the app is closed. One skip line per app, not per subdirectory.
+drop_app() {
+  local proc=$1 base=$2 d; shift 2
+  if pgrep -x "$proc" >/dev/null 2>&1; then skip "$proc is running — skipped"; return; fi
+  for d in "$@"; do drop "$base/$d"; done
+}
+
 printf '═══════════════════════════════════════════════════════\n'
 if (( DRY )); then echo " CLEANUP — DRY RUN (nothing is deleted)"
 else               echo " SYSTEM CLEANUP$( (( DEEP )) && echo ' — DEEP')"; fi
@@ -176,6 +184,27 @@ step "Thumbnails";  drop "$HOME/.cache/thumbnails"
 step "Brave cache"; drop_idle brave "$HOME/.cache/BraveSoftware"
 step "AUR build clones"; drop "$HOME/.cache/paru/clone"
 
+# Electron apps keep caches inside the profile dir, not ~/.cache. VSIXs are
+# downloaded extension archives VS Code keeps around after install.
+step "VS Code caches"
+drop_app code "$HOME/.config/Code" Cache "Code Cache" GPUCache CachedData CachedExtensionVSIXs
+step "Claude Desktop caches"
+drop_app claude-desktop "$HOME/.config/Claude" Cache "Code Cache" GPUCache
+step "Discord caches"
+drop_app Discord "$HOME/.config/discord" Cache "Code Cache" GPUCache
+
+# Chrome-for-testing profiles arrive via Playwright/npx; their cache dirs
+# regrow on the next test run. The browser binaries themselves
+# (~/.cache/ms-playwright) are a re-download and stay in the deep pass.
+step "Chrome-for-testing caches"
+drop "$HOME/.cache/google-chrome-for-testing"
+drop "$HOME/.cache/google-chrome-for-testing-headless"
+
+# The active pnpm store is ~/.local/share/pnpm/store (pnpm store path);
+# ~/.cache/pnpm is a leftover store from an older pnpm plus the dlx cache —
+# content-addressed, worst case is a re-download.
+step "Stale pnpm store"; drop "$HOME/.cache/pnpm"
+
 step "npm / pnpm caches"
 # Both arrive via fnm, which only puts them on PATH in an interactive shell.
 # Under systemd or cron they are simply absent, and that is not an error.
@@ -210,6 +239,18 @@ if (( DEEP )); then
   step "Steam shader cache"; drop "$HOME/.local/share/Steam/steamapps/shadercache"
   step "Playwright browsers"; drop "$HOME/.cache/ms-playwright" "~/.cache/ms-playwright (then: npx playwright install)"
   step "Spotify cache"; drop_idle spotify "$HOME/.cache/spotify"
+
+  # Desktop GL/Vulkan shader caches, same trade as Steam's: rebuilt on the
+  # fly, first minutes after wiping are slightly stuttery.
+  step "Driver shader caches"
+  drop "$HOME/.cache/mesa_shader_cache"
+  drop "$HOME/.cache/mesa_shader_cache_db"
+  drop "$HOME/.cache/nvidia"
+
+  # tsserver re-fetches @types on demand; ~/.cache/node is node-gyp headers.
+  step "Toolchain caches"
+  drop "$HOME/.cache/typescript"
+  drop "$HOME/.cache/node"
 fi
 
 # ── summary ─────────────────────────────────────────────────────────────
