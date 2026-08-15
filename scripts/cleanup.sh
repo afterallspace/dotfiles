@@ -208,12 +208,18 @@ step "Stale pnpm store"; drop "$HOME/.cache/pnpm"
 step "npm / pnpm caches"
 # Both arrive via fnm, which only puts them on PATH in an interactive shell.
 # Under systemd or cron they are simply absent, and that is not an error.
+#
+# pnpm here is a corepack shim, and on a version bump corepack asks
+# "about to download ... [Y/n]" on the terminal. With stdout in /dev/null
+# that prompt is invisible and the script hangs on stdin — so: no prompt,
+# no stdin.
+node_tool() { COREPACK_ENABLE_DOWNLOAD_PROMPT=0 "$@" </dev/null >/dev/null 2>&1; }
 if command -v pnpm >/dev/null 2>&1; then
   pb=$(bytes "$HOME/.local/share/pnpm/store")
   if (( DRY )); then
     skip "pnpm store prune (size not knowable up front, store is $(human "$pb"))"
   else
-    pnpm store prune >/dev/null 2>&1
+    node_tool pnpm store prune
     freed "$(( pb - $(bytes "$HOME/.local/share/pnpm/store") ))" "pnpm store prune"
   fi
 else
@@ -221,7 +227,7 @@ else
 fi
 if command -v npm >/dev/null 2>&1; then
   nb=$(bytes "$HOME/.npm/_cacache")
-  if (( nb > 0 )); then freed "$nb" "~/.npm/_cacache"; run npm cache clean --force
+  if (( nb > 0 )); then freed "$nb" "~/.npm/_cacache"; run node_tool npm cache clean --force
   else skip "npm cache empty"; fi
 else
   skip "npm not on PATH"
@@ -263,8 +269,3 @@ else
     "$(df -h --output=avail / | tail -1 | tr -d ' ')"
 fi
 printf '═══════════════════════════════════════════════════════\n'
-
-# For the record: 73% of this disk is Steam (1016 GB) and ~/Videos/Archive
-# (217 GB). No amount of cache clearing competes with that — this script deals
-# in single-digit gigabytes. Horizon Zero Dawn and its Remaster are both
-# installed, 181 GB between them.
