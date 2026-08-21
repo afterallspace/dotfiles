@@ -3,7 +3,7 @@
   "logo": {
     "source": "~/.config/fastfetch/shell.png",
     "type": "kitty",
-    "height": 20,
+    "height": 21,
     "padding": {
       "bottom": 3
     }
@@ -70,11 +70,11 @@
       "key": "RAM      ",
       "keyColor": "yellow"
     },
-    // {
-    //   "type": "swap",
-    //   "key": "Swap     ",
-    //   "keyColor": "yellow"
-    // },
+    {
+      "type": "swap",
+      "key": "Swap     ",
+      "keyColor": "yellow"
+    },
     {
       "type": "disk",
       "key": "Disk     ",
