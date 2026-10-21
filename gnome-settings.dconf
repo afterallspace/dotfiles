@@ -1,11 +1,39 @@
+[de/haeckerfelix/Fragments]
+client-last-connection='00000000-0000-0000-0000-000000000000'
+window-height=700
+window-width=900
+
 [net/nokyan/Resources]
+apps-show-combined-memory=false
+apps-show-decoder=false
+apps-show-drive-read-speed=false
+apps-show-drive-read-total=false
+apps-show-drive-write-speed=false
+apps-show-drive-write-total=false
+apps-show-encoder=false
+apps-show-gpu-memory=false
+apps-show-swap=false
 apps-sort-by=uint32 1
 apps-sort-by-ascending=false
+detailed-priority=true
+graph-data-points=uint32 60
 is-maximized=false
-last-viewed-page='battery-SUNWODA-R15B07W-BAT0'
+last-viewed-page='memory'
+network-bits=false
+normalize-cpu-usage=true
+processes-sort-by=uint32 9
+processes-sort-by-ascending=true
+show-graph-grids=true
 show-logical-cpus=true
-window-height=747
+show-virtual-network-interfaces=false
+sidebar-description=true
+sidebar-details=true
+sidebar-meter-type='Graph'
+window-height=856
 window-width=1072
+
+[org/gnome/Loupe]
+show-properties=false
 
 [org/gnome/Ptyxis]
 default-profile-uuid='2836e00098172b11ce58a5b56a5cc17a'
@@ -14,6 +42,15 @@ window-size=(uint32 118, uint32 41)
 
 [org/gnome/Ptyxis/Profiles/2836e00098172b11ce58a5b56a5cc17a]
 palette='gnome'
+
+[org/gnome/Resources]
+apps-sort-by=uint32 1
+apps-sort-by-ascending=false
+is-maximized=false
+last-viewed-page='memory'
+show-logical-cpus=true
+window-height=737
+window-width=1024
 
 [org/gnome/Showtime/State]
 is-maximized=false
@@ -34,8 +71,8 @@ window-maximized=false
 window-size=(360, 616)
 
 [org/gnome/control-center]
-last-panel='privacy'
-window-state=(1042, 669, false)
+last-panel='background'
+window-state=(998, 669, false)
 
 [org/gnome/desktop/a11y/magnifier]
 cross-hairs-length=58
@@ -70,8 +107,8 @@ exec-arg='-e'
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/afterall/.local/share/backgrounds/2026-07-19-17-18-40-IMG_20240908_115222.webp'
-picture-uri-dark='file:///home/afterall/.local/share/backgrounds/2026-07-19-17-18-40-IMG_20240908_115222.webp'
+picture-uri='file:///home/afterall/.local/share/backgrounds/2026-07-19-17-18-09-IMG_20200810_195704.webp'
+picture-uri-dark='file:///home/afterall/.local/share/backgrounds/2026-07-19-17-18-09-IMG_20200810_195704.webp'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -85,19 +122,20 @@ play-sound=true
 
 [org/gnome/desktop/input-sources]
 current=uint32 0
-mru-sources=[('xkb', 'us'), ('xkb', 'ru')]
+mru-sources=[('xkb', 'ru'), ('xkb', 'us')]
 per-window=true
 sources=[('xkb', 'us'), ('xkb', 'ru')]
 xkb-options=@as []
 
 [org/gnome/desktop/interface]
-accent-color='teal'
+accent-color='yellow'
 color-scheme='prefer-dark'
 cursor-theme='Bibata-Modern-Classic'
 document-font-name='Ubuntu 11'
 enable-animations=true
 font-hinting='slight'
 font-name='Ubuntu 10'
+gtk-enable-primary-paste=true
 gtk-theme='adw-gtk3-dark'
 icon-theme='Adwaita'
 monospace-font-name='UbuntuMono Nerd Font Mono 12'
@@ -105,10 +143,23 @@ show-battery-percentage=false
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-showtime', 'spotify', 'mullvad-vpn', 'gnome-power-panel', 'com-anthropic-claude', 'gnome-about-panel', 'org-telegram-desktop', 'org-gnome-nautilus', 'brave-browser', 'code', 'discord', 'org-gnome-baobab']
+application-children=['org-gnome-showtime', 'spotify', 'mullvad-vpn', 'gnome-power-panel', 'com-anthropic-claude', 'gnome-about-panel', 'org-telegram-desktop', 'org-gnome-nautilus', 'brave-browser', 'code', 'discord', 'org-gnome-baobab', 'org-gnome-decibels', 'com-dec05eba-gpu-screen-recorder', 'de-haeckerfelix-fragments', 'org-gnome-extensions', 'fr-handbrake-ghb', 'com-microsoft-vscode', 'org-gnome-loupe', 'steam', 'brave-jpgjhpldbgbfamogmilmefflplfcldij-default', 'chrome-jpgjhpldbgbfamogmilmefflplfcldij-default', 'chrome-meaaoopkcbjnhdacooldbdggeegehocd-default', 'com-mattjakeman-extensionmanager', 'chrome-fgapdjegmkjecndmglfokhnbgjdegajo-default', 'google-chrome']
+show-banners=true
 
 [org/gnome/desktop/notifications/application/brave-browser]
 application-id='brave-browser.desktop'
+
+[org/gnome/desktop/notifications/application/brave-jpgjhpldbgbfamogmilmefflplfcldij-default]
+application-id='brave-jpgjhpldbgbfamogmilmefflplfcldij-Default.desktop'
+
+[org/gnome/desktop/notifications/application/chrome-fgapdjegmkjecndmglfokhnbgjdegajo-default]
+application-id='chrome-fgapdjegmkjecndmglfokhnbgjdegajo-Default.desktop'
+
+[org/gnome/desktop/notifications/application/chrome-jpgjhpldbgbfamogmilmefflplfcldij-default]
+application-id='chrome-jpgjhpldbgbfamogmilmefflplfcldij-Default.desktop'
+
+[org/gnome/desktop/notifications/application/chrome-meaaoopkcbjnhdacooldbdggeegehocd-default]
+application-id='chrome-meaaoopkcbjnhdacooldbdggeegehocd-Default.desktop'
 
 [org/gnome/desktop/notifications/application/code]
 application-id='code.desktop'
@@ -116,8 +167,23 @@ application-id='code.desktop'
 [org/gnome/desktop/notifications/application/com-anthropic-claude]
 application-id='com.anthropic.Claude.desktop'
 
+[org/gnome/desktop/notifications/application/com-dec05eba-gpu-screen-recorder]
+application-id='com.dec05eba.gpu_screen_recorder.desktop'
+
+[org/gnome/desktop/notifications/application/com-mattjakeman-extensionmanager]
+application-id='com.mattjakeman.ExtensionManager.desktop'
+
+[org/gnome/desktop/notifications/application/com-microsoft-vscode]
+application-id='com.microsoft.VSCode.desktop'
+
+[org/gnome/desktop/notifications/application/de-haeckerfelix-fragments]
+application-id='de.haeckerfelix.Fragments.desktop'
+
 [org/gnome/desktop/notifications/application/discord]
 application-id='discord.desktop'
+
+[org/gnome/desktop/notifications/application/fr-handbrake-ghb]
+application-id='fr.handbrake.ghb.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-about-panel]
 application-id='gnome-about-panel.desktop'
@@ -125,8 +191,20 @@ application-id='gnome-about-panel.desktop'
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
 
+[org/gnome/desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
+
 [org/gnome/desktop/notifications/application/mullvad-vpn]
 application-id='mullvad-vpn.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-decibels]
+application-id='org.gnome.Decibels.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-extensions]
+application-id='org.gnome.Extensions.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-loupe]
+application-id='org.gnome.Loupe.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
@@ -139,6 +217,9 @@ application-id='org.telegram.desktop.desktop'
 
 [org/gnome/desktop/notifications/application/spotify]
 application-id='spotify.desktop'
+
+[org/gnome/desktop/notifications/application/steam]
+application-id='steam.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
 numlock-state=true
@@ -163,7 +244,7 @@ daily-limit-seconds=uint32 28800
 color-shading-type='solid'
 lock-delay=uint32 300
 picture-options='zoom'
-picture-uri='file:///home/afterall/.local/share/backgrounds/2026-07-19-17-18-40-IMG_20240908_115222.webp'
+picture-uri='file:///home/afterall/.local/share/backgrounds/2026-07-19-17-18-09-IMG_20200810_195704.webp'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -171,7 +252,7 @@ secondary-color='#000000000000'
 sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Nautilus.desktop']
 
 [org/gnome/desktop/session]
-idle-delay=uint32 600
+idle-delay=uint32 300
 
 [org/gnome/desktop/sound]
 event-sounds=true
@@ -196,8 +277,8 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=148
 sizing-mode='free'
-window-ratio=(0.95554621543506857, 0.88888888888888884)
-zoom=0.54224198100141763
+window-ratio=(0.95625000000000004, 0.88888888888888884)
+zoom=0.87741927835812672
 
 [org/gnome/file-roller/listing]
 list-mode='as-folder'
@@ -229,24 +310,13 @@ toggle-tiled-left=['<Super>Left']
 toggle-tiled-right=['<Super>Right']
 
 [org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
 migrated-gtk-settings=true
 
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
 initial-size-file-chooser=(890, 550)
 maximized=false
-
-[org/gnome/portal/filechooser/code]
-last-folder-path='/home/afterall/Downloads'
-
-[org/gnome/portal/filechooser/com.anthropic.Claude]
-last-folder-path='/home/afterall'
-
-[org/gnome/portal/filechooser/org.gnome.Loupe]
-last-folder-path='/home/afterall/Pictures/WP'
-
-[org/gnome/portal/filechooser/org.gnome.Settings]
-last-folder-path='/home/afterall/Pictures/WP'
 
 [org/gnome/power-manager]
 info-history-time=604800
@@ -255,23 +325,46 @@ info-last-device='/org/freedesktop/UPower/devices/line_power_ADP1'
 info-page-number=0
 info-stats-type='discharge-accuracy'
 
+[org/gnome/settings-daemon/global-shortcuts]
+applications=['com.anthropic.Claude']
+
+[org/gnome/settings-daemon/global-shortcuts/com.anthropic.Claude]
+shortcuts=[('4C89D2DF169948537F2D3DF0FA033864-Ctrl+Alt+Space', {'shortcuts': <['<Control><Alt>space']>, 'description': <'Claude shortcut: Ctrl+Alt+Space'>})]
+
 [org/gnome/settings-daemon/plugins/color]
 night-light-schedule-automatic=false
 
 [org/gnome/settings-daemon/plugins/housekeeping]
 donation-reminder-last-shown=int64 1784472315330121
 
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/gsr-toggle/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/gsr-1080p/']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/gsr-1080p]
+binding='<Super><Shift><Alt>r'
+command='/home/afterall/.config/scripts/gsr-toggle.sh 1080p'
+name='Screen Recording (1080p)'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/gsr-toggle]
+binding='<Super><Alt>r'
+command='/home/afterall/.config/scripts/gsr-toggle.sh'
+name='Screen Recording (native)'
+
 [org/gnome/settings-daemon/plugins/power]
 ambient-enabled=false
 idle-dim=true
 power-button-action='interactive'
+sleep-inactive-ac-timeout=7200
+sleep-inactive-ac-type='nothing'
+sleep-inactive-battery-timeout=7200
+sleep-inactive-battery-type='nothing'
 
 [org/gnome/shell]
-app-picker-layout=[{'mullvad-vpn.desktop': <{'position': <0>}>, 'org.gnome.Extensions.desktop': <{'position': <1>}>, 'org.gnome.Settings.desktop': <{'position': <2>}>, 'org.gnome.Calculator.desktop': <{'position': <3>}>, 'org.gnome.SimpleScan.desktop': <{'position': <4>}>, 'org.gnome.Snapshot.desktop': <{'position': <5>}>, 'btop.desktop': <{'position': <6>}>, 'discord.desktop': <{'position': <7>}>, 'net.nokyan.Resources.desktop': <{'position': <8>}>}]
+app-picker-layout=[{'mullvad-vpn.desktop': <{'position': <0>}>, 'org.gnome.Calculator.desktop': <{'position': <1>}>, 'org.gnome.SimpleScan.desktop': <{'position': <2>}>, 'org.gnome.Snapshot.desktop': <{'position': <3>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <4>}>, 'de.haeckerfelix.Fragments.desktop': <{'position': <5>}>, 'google-chrome.desktop': <{'position': <6>}>, 'fr.handbrake.ghb.desktop': <{'position': <7>}>, 'chrome-fgapdjegmkjecndmglfokhnbgjdegajo-Default.desktop': <{'position': <8>}>}]
 disable-user-extensions=false
 disabled-extensions=@as []
-enabled-extensions=['clipboard-indicator@tudmotu.com', 'just-perfection-desktop@just-perfection', 'blur-my-shell@aunetx', 'tilingshell@ferrarodomenico.com', 'gradia-integration@alexandervanhee.github.io']
-favorite-apps=['com.mitchellh.ghostty.desktop', 'code.desktop', 'brave-browser.desktop', 'org.telegram.desktop.desktop', 'com.anthropic.Claude.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop', 'steam.desktop', 'org.gnome.Settings.desktop']
+enabled-extensions=['clipboard-indicator@afterall', 'just-perfection-desktop@just-perfection', 'gsr-timer@afterall', 'lockscreen-layout-badge@afterall', 'blur-my-shell@aunetx', 'gradia-capture@afterall', 'panel-clock@afterall']
+favorite-apps=['com.mitchellh.ghostty.desktop', 'com.microsoft.VSCode.desktop', 'brave-browser.desktop', 'org.telegram.desktop.desktop', 'com.anthropic.Claude.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop', 'steam.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Resources.desktop', 'discord.desktop', 'chrome-meaaoopkcbjnhdacooldbdggeegehocd-Default.desktop', 'chrome-fgapdjegmkjecndmglfokhnbgjdegajo-Default.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='50.3'
 
@@ -279,21 +372,15 @@ welcome-dialog-last-shown-version='50.3'
 current-workspace-only=true
 
 [org/gnome/shell/extensions/blur-my-shell]
-hacks-level=1
-pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000000'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>, 'unscaled_radius': <30>}>}>]>}}
 rounded-blur-found=false
-settings-version=2
+settings-version=7
 
 [org/gnome/shell/extensions/blur-my-shell/appfolder]
-blur=false
-sigma=30
+blur=true
+pipeline='pipeline_default'
 
 [org/gnome/shell/extensions/blur-my-shell/applications]
 blur=false
-blur-on-overview=false
-corner-when-maximized=false
-dynamic-opacity=false
-enable-all=false
 pipeline='pipeline_default'
 static-blur=true
 
@@ -303,38 +390,40 @@ pipeline='pipeline_default'
 [org/gnome/shell/extensions/blur-my-shell/dash-to-dock]
 blur=true
 pipeline='pipeline_default'
-
-[org/gnome/shell/extensions/blur-my-shell/dash-to-panel]
-blur-original-panel=true
-
-[org/gnome/shell/extensions/blur-my-shell/hidetopbar]
-compatibility=true
+static-blur=false
+style-dash-to-dock=3
+unblur-in-overview=false
 
 [org/gnome/shell/extensions/blur-my-shell/lockscreen]
-blur=false
 pipeline='pipeline_default'
 
 [org/gnome/shell/extensions/blur-my-shell/overview]
 blur=true
 pipeline='pipeline_default'
-style-components=1
 
 [org/gnome/shell/extensions/blur-my-shell/panel]
-blur=true
-force-light-text=false
 pipeline='pipeline_default'
-sigma=5
-static-blur=true
-style-panel=0
+static-blur=false
+
+[org/gnome/shell/extensions/blur-my-shell/popup]
+blur=true
+override-background=true
+pipeline='pipeline_default'
+preserve-shell-theme=false
+static-blur=false
+style-popup=3
 
 [org/gnome/shell/extensions/blur-my-shell/screenshot]
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/window-list]
 pipeline='pipeline_default'
 
 [org/gnome/shell/extensions/clipboard-indicator]
 blink-icon-on-copy=false
 confirm-clear=true
 disable-down-arrow=true
-display-mode=0
+display-mode=3
 next-history-clear=-1
 notify-on-copy=false
 open-at-cursor=false
@@ -349,7 +438,8 @@ toggle-menu=['<Super>v']
 topbar-preview-size=30
 
 [org/gnome/shell/extensions/gradia-companion]
-tool-settings={'freehand': ('#000000', 3.0), 'rectangle': ('#000000', 3.0), 'solid-rectangle': ('#000000', 3.0), 'highlighter': ('#ffdd00', 4.0), 'arrow': ('#ff4444', 3.0), 'stamp': ('#000000', 3.0), 'select': ('#000000', 4.0)}
+play-sound=true
+tool-settings={'freehand': ('#000000', 3.0), 'rectangle': ('#ff4444', 3.0), 'solid-rectangle': ('#000000', 3.0), 'highlighter': ('#ffdd00', 4.0), 'arrow': ('#ff4444', 3.0), 'stamp': ('#000000', 3.0), 'select': ('#000000', 4.0), 'drag': ('#000000', 4.0)}
 
 [org/gnome/shell/extensions/just-perfection]
 accent-color-icon=false
@@ -368,7 +458,7 @@ dash-icon-size=40
 dash-separator=false
 double-super-to-appgrid=true
 invert-calendar-column-items=false
-keyboard-layout=false
+keyboard-layout=true
 looking-glass-height=0
 looking-glass-width=0
 osd=true
@@ -406,24 +496,12 @@ workspace-switcher-size=0
 workspace-wrap-around=false
 workspaces-in-app-grid=true
 
-[org/gnome/shell/extensions/tilingshell]
-active-screen-edges=false
-edge-tiling-mode='adaptive'
-enable-smart-window-border-radius=false
-enable-snap-assist=true
-enable-window-border=false
-last-version-name-installed='17.3'
-layouts-json='[{"id":"1839514","tiles":[{"x":0,"y":0,"width":1,"height":1,"groups":[]}]}]'
-overridden-settings='{}'
-selected-layouts=[['1839514'], ['1839514'], ['1839514']]
-window-use-custom-border-color=false
-
 [org/gnome/shell/keybindings]
 toggle-message-tray=['<Super>m']
 
 [org/gtk/gtk4/settings/color-chooser]
 custom-colors=[(0.90333330631256104, 0.32218888401985168, 0.32218888401985168, 0.0), (0.93666666746139526, 0.33720001578330994, 0.33720001578330994, 0.0), (0.0, 0.0, 0.0, 0.0)]
-selected-color=(true, 0.90333330631256104, 0.32218888401985168, 0.32218888401985168, 0.0)
+selected-color=(true, 1.0, 1.0, 1.0, 1.0)
 
 [org/gtk/gtk4/settings/file-chooser]
 show-hidden=true

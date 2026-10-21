@@ -83,7 +83,8 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
   session bits that are tedious to recreate by hand.
 - `gnome-settings.dconf` — full dconf dump. This is where the actual GNOME
   look and behaviour lives; the dotfiles alone won't restore it.
-- `pkglist.txt` / `pkglist-aur.txt` — explicitly installed packages.
+- `pkglist.txt` / `pkglist-aur.txt` — explicitly installed packages
+  (`pacman -Qqen` / `pacman -Qqem`).
 - **`debug/`** — see below.
 
 ## 🔬 debug/ — hardware investigations
@@ -113,9 +114,9 @@ and dead ends are kept on purpose — see the conventions in
 
 2. **Restore packages:**
    ```bash
-   sudo pacman -S --needed - < <(cut -d' ' -f1 ~/.config/pkglist.txt)
+   sudo pacman -S --needed - < ~/.config/pkglist.txt
+   paru -S --needed - < ~/.config/pkglist-aur.txt
    ```
-   AUR packages are listed separately in `pkglist-aur.txt` and need `paru`.
 
 3. **Restore GNOME settings:**
    ```bash
