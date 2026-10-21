@@ -1,0 +1,7 @@
+{
+  "uuid": "trayless-quit@afterall",
+  "name": "Trayless Quit",
+  "description": "Quits apps that hide into a tray icon on close, since GNOME has no tray to bring them back from",
+  "shell-version": ["51"],
+  "version": 1
+}

@@ -11,7 +11,6 @@
 !/split-tunnel/
 
 !/systemd/
-!/autostart/
 !monitors.xml
 !user-dirs.dirs
 !xdg-terminals.list

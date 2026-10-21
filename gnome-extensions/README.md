@@ -13,6 +13,7 @@ relogin. See the header of the script for usage.
 | `gsr-timer@afterall`               | Panel indicator for `scripts/gsr-toggle.sh` recordings                                                    |
 | `lockscreen-layout-badge@afterall` | Keyboard layout labels that survive the lock screen                                                       |
 | `panel-clock@afterall`             | Top bar clock as `Oct 10 · 6:35 PM` instead of GNOME's wide gap                                           |
+| `trayless-quit@afterall`           | Quits apps that hide into a tray on close (Mullvad VPN), since GNOME has no tray to reopen them from      |
 | `clipboard-indicator@afterall`     | Fork of [Clipboard Indicator](https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator) (MIT) |
 | `gradia-capture@afterall`          | Fork of [Gradia Capture](https://github.com/AlexanderVanhee/gradia-companion) (GPL-3.0)                   |
 

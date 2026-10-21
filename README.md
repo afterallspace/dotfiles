@@ -79,7 +79,7 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
   installed with `sudo system/apply.sh`.
 - `split-tunnel/` — launchers that keep selected apps outside the Mullvad
   tunnel, linked into `~/.local` by `split-tunnel/install.sh`.
-- `autostart/`, `monitors.xml`, `user-dirs.dirs`, `xdg-terminals.list` —
+- `monitors.xml`, `user-dirs.dirs`, `xdg-terminals.list` —
   session bits that are tedious to recreate by hand.
 - `gnome-settings.dconf` — full dconf dump. This is where the actual GNOME
   look and behaviour lives; the dotfiles alone won't restore it.
