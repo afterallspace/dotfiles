@@ -43,6 +43,15 @@ else
 fi
 zramctl --output NAME,ALGORITHM,DISKSIZE,DATA,COMPR --noheadings 2>/dev/null |
   while read -r l; do say "zram" "$l"; done
+# zswap keeps swapped pages compressed in RAM; what it wrote back to the disk
+# swap since boot, and what was read back from there, is the cost of overflow.
+if [[ $(cat /sys/module/zswap/parameters/enabled 2>/dev/null) == Y ]]; then
+  read -r zc zs < <(awk '/^Zswap:/{c=$2} /^Zswapped:/{s=$2} END{print c+0, s+0}' /proc/meminfo)
+  read -r wb pin < <(awk '/^zswpwb /{w=$2} /^pswpin /{p=$2} END{print w+0, p+0}' /proc/vmstat)
+  ratio=$(awk -v c="$zc" -v s="$zs" 'BEGIN{print c ? sprintf("%.1fx", s/c) : "-"}')
+  say "zswap" "$((zs/1024)) MiB held in $((zc/1024)) MiB of RAM ($ratio)"
+  say "disk swap since boot" "$((wb*4/1024)) MiB written, $((pin*4/1024)) MiB read back"
+fi
 # PSI: share of the last minute someone was stalled waiting for memory.
 psi=$(awk -F'[= ]' '/^some/{print $3}' /proc/pressure/memory 2>/dev/null)
 say "pressure(avg10)" "${psi:-?}%"
@@ -112,6 +121,8 @@ else
 fi
 ooms=$(journalctl -b 0 --no-pager 2>/dev/null | grep -c "Out of memory: Killed")
 if (( ooms > 0 )); then warn "$ooms OOM kill(s) this boot — check swap above"; else ok "no OOM kills"; fi
+oomd=$(journalctl -b 0 -t systemd-oomd --no-pager 2>/dev/null | grep -c "for killing")
+(( oomd > 0 )) && warn "systemd-oomd killed $oomd cgroup(s) this boot"
 
 # ── packages ────────────────────────────────────────────────────────────
 step "Packages"
