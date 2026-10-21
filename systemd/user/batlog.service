@@ -1,0 +1,8 @@
+# Daily battery snapshot: one row of wear and capacity in debug/battery/batlog.csv.
+# Status: systemctl --user list-timers batlog.timer   |   docs: ~/.config/debug/battery/BATTERY.md
+[Unit]
+Description=Battery wear snapshot (debug/battery trend log)
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/debug/battery/batcheck.sh

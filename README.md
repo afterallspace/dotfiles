@@ -73,7 +73,8 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
 - `systemd/user/` — **`nvpcf-unlock.service`**, the boot-time workaround that
   keeps the GPU from being throttled. Without it the machine loses ~70% of
   its GPU performance. Also a memory floor for the GNOME session, so the
-  compositor is the last thing to be paged out.
+  compositor is the last thing to be paged out, and `batlog.timer`, a daily
+  battery wear snapshot for `debug/battery/`.
 - `system/` — config that lives in `/etc` (zswap in place of zram, the
   session memory floor's system half, systemd-oomd, a module blacklist),
   installed with `sudo system/apply.sh`.
@@ -97,7 +98,7 @@ tooling and logs. Start at [`debug/README.md`](debug/README.md).
 | Branch | Problem | Status |
 |---|---|---|
 | [`debug/gpu/`](debug/gpu/README.md) | RTX 2050 throttled to 16 W instead of 35 W | **solved** via a runtime SSDT workaround |
-| [`debug/battery/`](debug/battery/BATTERY.md) | 39% wear after ~2.5 years, no charge limit available | **open** |
+| [`debug/battery/`](debug/battery/BATTERY.md) | ~43% wear (57% health) after ~2.5 years, no charge limit available | **open**, logged daily |
 | [`debug/nvme/`](debug/nvme/NVME.md) | 130k power cycles reported at 6k power-on hours | **closed** — counter is fine |
 
 Each branch keeps its own CSV log and a `*check.sh` tool. Negative results

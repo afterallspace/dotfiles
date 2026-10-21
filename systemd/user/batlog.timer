@@ -1,0 +1,11 @@
+# The firmware gives no cycle count, so the wear trend is all there is to watch.
+# Enable: systemctl --user daemon-reload && systemctl --user enable --now batlog.timer
+[Unit]
+Description=Daily battery wear snapshot
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
