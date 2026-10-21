@@ -1,0 +1,4 @@
+#!/bin/sh
+# Launch code outside the Mullvad tunnel (split tunneling)
+[ -x /usr/bin/mullvad-exclude ] && exec /usr/bin/mullvad-exclude /usr/bin/code "$@"
+exec /usr/bin/code "$@"

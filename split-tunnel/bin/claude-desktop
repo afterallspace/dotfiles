@@ -1,0 +1,4 @@
+#!/bin/sh
+# Launch claude-desktop outside the Mullvad tunnel (split tunneling)
+[ -x /usr/bin/mullvad-exclude ] && exec /usr/bin/mullvad-exclude /usr/bin/claude-desktop "$@"
+exec /usr/bin/claude-desktop "$@"

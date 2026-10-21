@@ -57,7 +57,7 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
 - **Terminal:** [Ghostty](https://ghostty.org/)
 - **AUR Helper:** Paru
 - **Power Management:** Gamemode + custom GPU clock locking
-- **VPN:** Mullvad (with split tunneling for Steam and Spotify)
+- **VPN:** Mullvad (with split tunneling for Steam, Spotify, VS Code and Claude)
 
 ## 📁 Structure
 
@@ -77,6 +77,8 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
 - `system/` — config that lives in `/etc` (zswap in place of zram, the
   session memory floor's system half, systemd-oomd, a module blacklist),
   installed with `sudo system/apply.sh`.
+- `split-tunnel/` — launchers that keep selected apps outside the Mullvad
+  tunnel, linked into `~/.local` by `split-tunnel/install.sh`.
 - `autostart/`, `monitors.xml`, `user-dirs.dirs`, `xdg-terminals.list` —
   session bits that are tedious to recreate by hand.
 - `gnome-settings.dconf` — full dconf dump. This is where the actual GNOME
@@ -120,10 +122,12 @@ and dead ends are kept on purpose — see the conventions in
    dconf load / < ~/.config/gnome-settings.dconf
    ```
 
-   Then link the Shell extensions, build the SVG cursor theme GNOME 51
-   needs, apply the login screen and system settings and reboot:
+   Then link the Shell extensions and split-tunnel launchers, build the SVG
+   cursor theme GNOME 51 needs, apply the login screen and system settings
+   and reboot:
    ```bash
    ~/.config/gnome-extensions/install.sh
+   ~/.config/split-tunnel/install.sh
    ~/.config/scripts/bibata-scalable.py
    sudo ~/.config/gdm/apply.sh
    sudo ~/.config/system/apply.sh
