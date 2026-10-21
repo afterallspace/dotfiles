@@ -363,7 +363,7 @@ sleep-inactive-battery-type='nothing'
 app-picker-layout=[{'mullvad-vpn.desktop': <{'position': <0>}>, 'org.gnome.Calculator.desktop': <{'position': <1>}>, 'org.gnome.SimpleScan.desktop': <{'position': <2>}>, 'org.gnome.Snapshot.desktop': <{'position': <3>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <4>}>, 'de.haeckerfelix.Fragments.desktop': <{'position': <5>}>, 'google-chrome.desktop': <{'position': <6>}>, 'fr.handbrake.ghb.desktop': <{'position': <7>}>, 'chrome-fgapdjegmkjecndmglfokhnbgjdegajo-Default.desktop': <{'position': <8>}>}]
 disable-user-extensions=false
 disabled-extensions=@as []
-enabled-extensions=['clipboard-indicator@afterall', 'just-perfection-desktop@just-perfection', 'gsr-timer@afterall', 'lockscreen-layout-badge@afterall', 'blur-my-shell@aunetx', 'gradia-capture@afterall', 'panel-clock@afterall']
+enabled-extensions=['clipboard-indicator@afterall', 'just-perfection-desktop@just-perfection', 'gsr-timer@afterall', 'lockscreen-layout-badge@afterall', 'blur-my-shell@aunetx', 'gradia-capture@afterall', 'panel-clock@afterall', 'trayless-quit@afterall']
 favorite-apps=['com.mitchellh.ghostty.desktop', 'com.microsoft.VSCode.desktop', 'brave-browser.desktop', 'org.telegram.desktop.desktop', 'com.anthropic.Claude.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop', 'steam.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Resources.desktop', 'discord.desktop', 'chrome-meaaoopkcbjnhdacooldbdggeegehocd-Default.desktop', 'chrome-fgapdjegmkjecndmglfokhnbgjdegajo-Default.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='50.3'
@@ -372,52 +372,24 @@ welcome-dialog-last-shown-version='50.3'
 current-workspace-only=true
 
 [org/gnome/shell/extensions/blur-my-shell]
+pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_635b932b-5f5a-4cce-9583-87095bc3d7fa'>, 'params': <@a{sv} {}>}>]>}}
 rounded-blur-found=false
 settings-version=7
 
-[org/gnome/shell/extensions/blur-my-shell/appfolder]
-blur=true
-pipeline='pipeline_default'
-
 [org/gnome/shell/extensions/blur-my-shell/applications]
-blur=false
-pipeline='pipeline_default'
-static-blur=true
-
-[org/gnome/shell/extensions/blur-my-shell/coverflow-alt-tab]
-pipeline='pipeline_default'
+static-blur=false
 
 [org/gnome/shell/extensions/blur-my-shell/dash-to-dock]
-blur=true
-pipeline='pipeline_default'
-static-blur=false
 style-dash-to-dock=3
 unblur-in-overview=false
 
-[org/gnome/shell/extensions/blur-my-shell/lockscreen]
-pipeline='pipeline_default'
-
-[org/gnome/shell/extensions/blur-my-shell/overview]
-blur=true
-pipeline='pipeline_default'
-
 [org/gnome/shell/extensions/blur-my-shell/panel]
-pipeline='pipeline_default'
-static-blur=false
+force-light-text=false
+static-blur=true
+unblur-in-overview=false
 
 [org/gnome/shell/extensions/blur-my-shell/popup]
-blur=true
-override-background=true
-pipeline='pipeline_default'
-preserve-shell-theme=false
 static-blur=false
-style-popup=3
-
-[org/gnome/shell/extensions/blur-my-shell/screenshot]
-pipeline='pipeline_default'
-
-[org/gnome/shell/extensions/blur-my-shell/window-list]
-pipeline='pipeline_default'
 
 [org/gnome/shell/extensions/clipboard-indicator]
 blink-icon-on-copy=false
