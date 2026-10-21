@@ -72,7 +72,11 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
   games; it is `chattr +i` locked because sudoers points at it directly.
 - `systemd/user/` — **`nvpcf-unlock.service`**, the boot-time workaround that
   keeps the GPU from being throttled. Without it the machine loses ~70% of
-  its GPU performance.
+  its GPU performance. Also a memory floor for the GNOME session, so the
+  compositor is the last thing to be paged out.
+- `system/` — config that lives in `/etc` (zswap in place of zram, the
+  session memory floor's system half, systemd-oomd, a module blacklist),
+  installed with `sudo system/apply.sh`.
 - `autostart/`, `monitors.xml`, `user-dirs.dirs`, `xdg-terminals.list` —
   session bits that are tedious to recreate by hand.
 - `gnome-settings.dconf` — full dconf dump. This is where the actual GNOME
@@ -117,11 +121,12 @@ and dead ends are kept on purpose — see the conventions in
    ```
 
    Then link the Shell extensions, build the SVG cursor theme GNOME 51
-   needs, apply the login screen settings and log in again:
+   needs, apply the login screen and system settings and reboot:
    ```bash
    ~/.config/gnome-extensions/install.sh
    ~/.config/scripts/bibata-scalable.py
    sudo ~/.config/gdm/apply.sh
+   sudo ~/.config/system/apply.sh
    ```
 
 4. **Re-arm the GPU workaround** — the service alone is not enough, it needs
