@@ -81,20 +81,20 @@ const RecordingIndicator = GObject.registerClass(
       box.add_child(this._label)
       box.add_child(new St.Icon({ icon_name: stopIconName() }))
       this.add_child(box)
-    }
 
-    // Any click stops the recording, matching GNOME's native indicator.
-    vfunc_event(event) {
-      const type = event.type()
-      if (type === Clutter.EventType.BUTTON_PRESS || type === Clutter.EventType.TOUCH_BEGIN) {
+      // Any click or tap stops the recording, matching GNOME's native
+      // indicator, which since GNOME 51 also reacts through a click gesture
+      // rather than raw events. The button's own gesture only toggles a menu,
+      // and there is none here.
+      const click = new Clutter.ClickGesture({ recognize_on_press: true })
+      click.connect('recognize', () => {
         try {
           Gio.Subprocess.new([SCRIPT], Gio.SubprocessFlags.NONE)
         } catch (e) {
           logError(e, 'gsr-timer: failed to spawn gsr-toggle')
         }
-        return Clutter.EVENT_STOP
-      }
-      return Clutter.EVENT_PROPAGATE
+      })
+      this.add_action(click)
     }
 
     setElapsed(text) {

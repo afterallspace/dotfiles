@@ -1,0 +1,20 @@
+# Login screen settings, mirrored from the user session. Installed by apply.sh
+# into /etc/dconf/db/gdm.d/ and locked there, so they beat anything the
+# greeter keeps in its own per-seat database.
+
+[org/gnome/desktop/interface]
+font-name='Ubuntu 10'
+document-font-name='Ubuntu 11'
+monospace-font-name='UbuntuMono Nerd Font Mono 12'
+font-hinting='slight'
+font-antialiasing='grayscale'
+cursor-theme='Bibata-Modern-Classic'
+cursor-size=24
+color-scheme='prefer-dark'
+accent-color='teal'
+clock-format='12h'
+
+[org/gnome/desktop/peripherals/touchpad]
+tap-to-click=false
+natural-scroll=true
+click-method='fingers'

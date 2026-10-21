@@ -1,0 +1,7 @@
+{
+  "uuid": "panel-clock@afterall",
+  "name": "Panel Clock",
+  "description": "Joins date and time in the top bar clock with a middle dot instead of GNOME's wide gap",
+  "shell-version": ["51"],
+  "version": 1
+}

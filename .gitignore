@@ -6,6 +6,7 @@
 !/fontconfig/
 !/scripts/
 !/gnome-extensions/
+!/gdm/
 
 !/systemd/
 !/autostart/
@@ -27,3 +28,4 @@
 !.prettierrc.mjs
 
 fish/fish_history
+gnome-extensions/*/schemas/gschemas.compiled

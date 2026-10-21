@@ -1,0 +1,10 @@
+{
+  "uuid": "clipboard-indicator@afterall",
+  "name": "Clipboard Indicator",
+  "description": "Clipboard history manager. Personal fork of Clipboard Indicator by Tudmotu, ported to GNOME 51.",
+  "url": "https://github.com/afterallspace/gnome/tree/main/gnome-extensions/clipboard-indicator@afterall",
+  "shell-version": ["51"],
+  "version": 1,
+  "gettext-domain": "clipboard-indicator",
+  "settings-schema": "org.gnome.shell.extensions.clipboard-indicator"
+}

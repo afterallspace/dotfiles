@@ -1,0 +1,9 @@
+{
+  "uuid": "gradia-capture@afterall",
+  "name": "Gradia Capture",
+  "description": "Annotation tools for the built-in screenshot UI. Personal fork of Gradia Capture by Alexander Vanhee, ported to GNOME 51.\nClipboard data may be overwritten with the annotated screenshot.",
+  "url": "https://github.com/afterallspace/gnome/tree/main/gnome-extensions/gradia-capture@afterall",
+  "shell-version": ["51"],
+  "version": 1,
+  "settings-schema": "org.gnome.shell.extensions.gradia-companion"
+}

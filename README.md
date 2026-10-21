@@ -52,7 +52,7 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
 
 ## 🛠 Tech Stack
 
-- **DE:** GNOME Shell 50.3 on Wayland
+- **DE:** GNOME Shell 51 on Wayland
 - **Shell:** Fish 🐟 + [Starship](https://starship.rs/)
 - **Terminal:** [Ghostty](https://ghostty.org/)
 - **AUR Helper:** Paru
@@ -64,6 +64,10 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
 - `fish/` — shell config, `fnm`/`pnpm` paths, `fastfetch` greeting.
 - `ghostty/`, `fontconfig/` — terminal and UI styling.
 - `fastfetch/` — fetch config and the banner image above.
+- `gnome-extensions/` — own Shell extensions plus maintained forks of
+  third-party ones, see [`gnome-extensions/README.md`](gnome-extensions/README.md).
+- `gdm/` — login screen settings (`greeter.dconf`), applied with
+  `sudo gdm/apply.sh`; GDM ignores the user's own dconf.
 - `scripts/` — utility scripts. `gamemode-tweaks.sh` locks GPU clocks during
   games; it is `chattr +i` locked because sudoers points at it directly.
 - `systemd/user/` — **`nvpcf-unlock.service`**, the boot-time workaround that
@@ -110,6 +114,14 @@ and dead ends are kept on purpose — see the conventions in
 3. **Restore GNOME settings:**
    ```bash
    dconf load / < ~/.config/gnome-settings.dconf
+   ```
+
+   Then link the Shell extensions, build the SVG cursor theme GNOME 51
+   needs, apply the login screen settings and log in again:
+   ```bash
+   ~/.config/gnome-extensions/install.sh
+   ~/.config/scripts/bibata-scalable.py
+   sudo ~/.config/gdm/apply.sh
    ```
 
 4. **Re-arm the GPU workaround** — the service alone is not enough, it needs

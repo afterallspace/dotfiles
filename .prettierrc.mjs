@@ -15,5 +15,14 @@ export default {
         singleQuote: false,
       },
     },
+    {
+      // Prettier ships no SVG language, so the parser cannot be inferred and
+      // the file is skipped without an error. The html parser handles SVG
+      // correctly, camelCase attributes (viewBox, stdDeviation) included.
+      files: ['*.svg'],
+      options: {
+        parser: 'html',
+      },
+    },
   ],
 }
