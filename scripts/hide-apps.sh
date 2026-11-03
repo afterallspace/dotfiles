@@ -26,12 +26,16 @@ APPS=(
   org.gnome.Showtime.desktop # Video Player
   org.gnome.Evince.desktop   # Document Viewer
   # service clutter pulled into the menu by dependencies
-  avahi-discover.desktop     # Avahi Zeroconf Browser
-  bssh.desktop               # Avahi SSH Server Browser
-  bvnc.desktop               # Avahi VNC Server Browser
-  lstopo.desktop             # Hardware Locality lstopo
   qv4l2.desktop              # Qt V4L2 test Utility
   qvidcap.desktop            # Qt V4L2 video capture utility
+  # LibreOffice: documents are opened from Nautilus, the launchers are noise
+  libreoffice-startcenter.desktop # LibreOffice
+  libreoffice-writer.desktop      # Writer
+  libreoffice-calc.desktop        # Calc
+  libreoffice-impress.desktop     # Impress
+  libreoffice-draw.desktop        # Draw
+  libreoffice-base.desktop        # Base
+  libreoffice-math.desktop        # Math
 )
 
 MODE="${1:-apply}"
@@ -39,9 +43,11 @@ mkdir -p "$DST"
 
 # Appends NoDisplay=true to the end of the [Desktop Entry] group specifically,
 # not the end of the file: Showtime continues into [Desktop Action new-window],
-# and the flag has no effect if it lands there.
+# and the flag has no effect if it lands there. An existing NoDisplay=false
+# (LibreOffice ships one) is dropped so the key is not duplicated.
 gen() {
   awk '/^\[Desktop Action/ && !d { print "NoDisplay=true"; print ""; d=1 }
+       !d && /^NoDisplay=/ { next }
        { print }
        END { if (!d) print "NoDisplay=true" }' "$1"
 }
