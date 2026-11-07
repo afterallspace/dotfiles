@@ -32,5 +32,5 @@ Custom Wayland-based environment for **CachyOS**, optimized for high-density OLE
 1. **Clone this repo into ~/.config:**
    _Note: Ensure you backup your existing .config first!_
    ```bash
-   git clone git@github.com:afterallspace/hypr.git ~/.config
+   git clone -b hyprland git@github.com:afterallspace/dotfiles.git ~/.config
    ```
