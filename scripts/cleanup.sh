@@ -239,10 +239,12 @@ if (( DEEP )); then
   printf ' DEEP PASS — everything below has to be fetched again\n'
   printf '───────────────────────────────────────────────────────\n'
 
-  # Not save games; those live in compatdata, which stays. These are shaders
-  # compiled for the current driver. They rebuild on their own, at the cost of
-  # stutter in the first minutes of each game.
-  step "Steam shader cache"; drop "$HOME/.local/share/Steam/steamapps/shadercache"
+  # Steam's shadercache is left alone on purpose. Wiped by hand it does not
+  # come back: Steam trusts CommittedDepotManifests in config/config.vdf and
+  # never re-downloads the pre-cache, so every shader then compiles in-game.
+  # It also holds Proton's video transcodes, gigabytes per title. A clean
+  # rebuild: Steam closed, shader subdirs removed, their segments cut from
+  # CommittedDepotManifests.
   step "Playwright browsers"; drop "$HOME/.cache/ms-playwright" "~/.cache/ms-playwright (then: npx playwright install)"
   step "Spotify cache"; drop_idle spotify "$HOME/.cache/spotify"
 
