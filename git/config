@@ -1,0 +1,38 @@
+[init]
+	defaultBranch = main
+[core]
+	editor = nano
+[commit]
+	verbose = true
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[merge]
+	conflictstyle = zdiff3
+	tool = vscode
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[log]
+	date = iso
+[user]
+	name = Daniil Sukharnikov
+	email = afterallspace@gmail.com
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+[mergetool]
+	keepBackup = false
+[difftool]
+	prompt = false

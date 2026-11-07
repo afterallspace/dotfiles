@@ -9,6 +9,7 @@
 !/gdm/
 !/system/
 !/split-tunnel/
+!/git/
 
 !/systemd/
 !monitors.xml
@@ -30,3 +31,4 @@
 
 fish/fish_history
 gnome-extensions/*/schemas/gschemas.compiled
+git/credentials
