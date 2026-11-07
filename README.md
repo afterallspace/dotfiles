@@ -105,12 +105,21 @@ Each branch keeps its own CSV log and a `*check.sh` tool. Negative results
 and dead ends are kept on purpose — see the conventions in
 [`debug/README.md`](debug/README.md).
 
+## 🌿 Branches
+
+- `main` — the setup running on this machine (GNOME).
+- [`hyprland`](https://github.com/afterallspace/dotfiles/tree/hyprland) — the
+  previous Hyprland setup, with its own history and README.
+
+`~/.config` is this repo's working tree, so switching branches there replaces
+the live config. To read the other branch, use `git show hyprland:<path>`.
+
 ## 🚀 Quick Start
 
 1. **Clone into `~/.config`:**
    _Back up your existing `.config` first._
    ```bash
-   git clone git@github.com:afterallspace/gnome.git ~/.config
+   git clone git@github.com:afterallspace/dotfiles.git ~/.config
    ```
 
 2. **Restore packages:**
