@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Install the system config kept under etc/ (zswap instead of zram, a memory
-# floor for the GNOME session, systemd-oomd, the open-file limit, the ucsi
-# blacklist) and remove known leftovers. Safe to rerun; reboot once for the
-# swap change and the file limit.
+# floor for the GNOME session, systemd-oomd, the open-file limit, the ufw
+# rules, the ucsi blacklist) and remove known leftovers. Safe to rerun; reboot
+# once for the swap change, the file limit and the firewall.
 #
 #   sudo ~/.config/system/apply.sh
 set -euo pipefail
