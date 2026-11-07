@@ -147,7 +147,7 @@ the live config. To read the other branch, use `git show hyprland:<path>`.
    ```bash
    ~/.config/gnome-extensions/install.sh
    ~/.config/split-tunnel/install.sh
-   install -Dm644 -t ~/.local/share/backgrounds ~/.config/backgrounds/*
+   install -Dm644 ~/.config/backgrounds/main.webp ~/.local/share/backgrounds/2026-07-19-17-18-09-IMG_20200810_195704.webp
    install -Dm644 -t ~/.nv/nvidia-application-profiles-rc.d ~/.config/nvidia/*
    ~/.config/scripts/bibata-scalable.py
    ~/.config/scripts/hide-apps.sh
