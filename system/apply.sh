@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Install the system config kept under etc/ (zswap instead of zram, a memory
-# floor for the GNOME session, systemd-oomd, the ucsi blacklist) and remove
-# known leftovers. Safe to rerun; reboot once for the swap change.
+# floor for the GNOME session, systemd-oomd, the open-file limit, the ucsi
+# blacklist) and remove known leftovers. Safe to rerun; reboot once for the
+# swap change and the file limit.
 #
 #   sudo ~/.config/system/apply.sh
 set -euo pipefail
@@ -24,4 +25,4 @@ ln -sfn /dev/null /etc/systemd/zram-generator.conf
 rm -fv /etc/systemd/system/multi-user.target.wants/ly@tty2.service /etc/systemd/system/-.slice.d/oomd.conf
 
 systemctl daemon-reload
-echo "done; reboot to move from zram to zswap"
+echo "done; reboot to move from zram to zswap and pick up the file limit"
