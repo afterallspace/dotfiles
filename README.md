@@ -76,10 +76,14 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
   compositor is the last thing to be paged out, and `batlog.timer`, a daily
   battery wear snapshot for `debug/battery/`.
 - `system/` — config that lives in `/etc` (zswap in place of zram, the
-  session memory floor's system half, systemd-oomd, a module blacklist),
-  installed with `sudo system/apply.sh`.
+  session memory floor's system half, systemd-oomd, the open-file limit, the
+  ufw firewall rules, a module blacklist), installed with
+  `sudo system/apply.sh`, plus `enabled-units.txt`, the system services to
+  enable.
 - `split-tunnel/` — launchers that keep selected apps outside the Mullvad
   tunnel, linked into `~/.local` by `split-tunnel/install.sh`.
+- `git/` — global git config and ignore list.
+- `backgrounds/` — the wallpaper `gnome-settings.dconf` points at.
 - `monitors.xml`, `user-dirs.dirs`, `xdg-terminals.list` —
   session bits that are tedious to recreate by hand.
 - `gnome-settings.dconf` — full dconf dump. This is where the actual GNOME
@@ -133,13 +137,14 @@ the live config. To read the other branch, use `git show hyprland:<path>`.
    dconf load / < ~/.config/gnome-settings.dconf
    ```
 
-   Then link the Shell extensions and split-tunnel launchers, build the SVG
-   cursor theme GNOME 51 needs, hide the listed launchers from the app grid,
-   apply the login screen and system settings, enable the system services
-   and reboot:
+   Then link the Shell extensions and split-tunnel launchers, restore the
+   wallpaper, build the SVG cursor theme GNOME 51 needs, hide the listed
+   launchers from the app grid, apply the login screen and system settings,
+   enable the system services and reboot:
    ```bash
    ~/.config/gnome-extensions/install.sh
    ~/.config/split-tunnel/install.sh
+   install -Dm644 -t ~/.local/share/backgrounds ~/.config/backgrounds/*
    ~/.config/scripts/bibata-scalable.py
    ~/.config/scripts/hide-apps.sh
    sudo ~/.config/gdm/apply.sh
