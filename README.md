@@ -134,14 +134,17 @@ the live config. To read the other branch, use `git show hyprland:<path>`.
    ```
 
    Then link the Shell extensions and split-tunnel launchers, build the SVG
-   cursor theme GNOME 51 needs, apply the login screen and system settings
+   cursor theme GNOME 51 needs, hide the listed launchers from the app grid,
+   apply the login screen and system settings, enable the system services
    and reboot:
    ```bash
    ~/.config/gnome-extensions/install.sh
    ~/.config/split-tunnel/install.sh
    ~/.config/scripts/bibata-scalable.py
+   ~/.config/scripts/hide-apps.sh
    sudo ~/.config/gdm/apply.sh
    sudo ~/.config/system/apply.sh
+   sudo systemctl enable $(cat ~/.config/system/enabled-units.txt)
    ```
 
 4. **Re-arm the GPU workaround** — the service alone is not enough, it needs
@@ -149,6 +152,15 @@ the live config. To read the other branch, use `git show hyprland:<path>`.
    [`debug/gpu/OPERATIONS.md`](debug/gpu/OPERATIONS.md):
    ```bash
    systemctl --user enable --now nvpcf-unlock.service
+   ```
+
+5. **Re-arm the game-mode GPU lock** — `gamemode.ini` runs
+   `scripts/gamemode-tweaks.sh` through sudo, so it needs a sudoers rule, and
+   the script has to stay immutable for that rule to be safe:
+   ```bash
+   echo 'afterall ALL=(root) NOPASSWD: /home/afterall/.config/scripts/gamemode-tweaks.sh start, /home/afterall/.config/scripts/gamemode-tweaks.sh stop' | sudo tee /etc/sudoers.d/gamemode-tweaks
+   sudo chmod 440 /etc/sudoers.d/gamemode-tweaks
+   sudo chattr +i ~/.config/scripts/gamemode-tweaks.sh
    ```
 
 ## ⚠ Machine-specific gotchas
