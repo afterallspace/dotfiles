@@ -47,7 +47,7 @@ palette='gnome'
 apps-sort-by=uint32 1
 apps-sort-by-ascending=false
 is-maximized=false
-last-viewed-page='memory'
+last-viewed-page='applications'
 show-logical-cpus=true
 window-height=737
 window-width=1024
@@ -71,7 +71,7 @@ window-maximized=false
 window-size=(360, 616)
 
 [org/gnome/control-center]
-last-panel='background'
+last-panel='sound'
 window-state=(998, 669, false)
 
 [org/gnome/desktop/a11y/magnifier]
@@ -277,8 +277,8 @@ show-sidebar=true
 sidebar-page='thumbnails'
 sidebar-size=148
 sizing-mode='free'
-window-ratio=(0.95625000000000004, 0.88888888888888884)
-zoom=0.87741927835812672
+window-ratio=(0.95588235294117652, 0.88888888888888884)
+zoom=0.58363326663144965
 
 [org/gnome/file-roller/listing]
 list-mode='as-folder'
@@ -308,6 +308,9 @@ workspaces-only-on-primary=false
 [org/gnome/mutter/keybindings]
 toggle-tiled-left=['<Super>Left']
 toggle-tiled-right=['<Super>Right']
+
+[org/gnome/nautilus/icon-view]
+default-zoom-level='medium'
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='icon-view'
@@ -360,11 +363,11 @@ sleep-inactive-battery-timeout=7200
 sleep-inactive-battery-type='nothing'
 
 [org/gnome/shell]
-app-picker-layout=[{'mullvad-vpn.desktop': <{'position': <0>}>, 'org.gnome.Calculator.desktop': <{'position': <1>}>, 'org.gnome.SimpleScan.desktop': <{'position': <2>}>, 'org.gnome.Snapshot.desktop': <{'position': <3>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <4>}>, 'de.haeckerfelix.Fragments.desktop': <{'position': <5>}>, 'google-chrome.desktop': <{'position': <6>}>, 'fr.handbrake.ghb.desktop': <{'position': <7>}>, 'chrome-fgapdjegmkjecndmglfokhnbgjdegajo-Default.desktop': <{'position': <8>}>}]
+app-picker-layout=[{'mullvad-vpn.desktop': <{'position': <0>}>, 'org.gnome.Calculator.desktop': <{'position': <1>}>, 'org.gnome.Snapshot.desktop': <{'position': <2>}>, 'org.gnome.SimpleScan.desktop': <{'position': <3>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <4>}>, 'google-chrome.desktop': <{'position': <5>}>, 'de.haeckerfelix.Fragments.desktop': <{'position': <6>}>, 'fr.handbrake.ghb.desktop': <{'position': <7>}>}]
 disable-user-extensions=false
 disabled-extensions=@as []
 enabled-extensions=['clipboard-indicator@afterall', 'just-perfection-desktop@just-perfection', 'gsr-timer@afterall', 'lockscreen-layout-badge@afterall', 'blur-my-shell@aunetx', 'gradia-capture@afterall', 'panel-clock@afterall', 'trayless-quit@afterall']
-favorite-apps=['com.mitchellh.ghostty.desktop', 'com.microsoft.VSCode.desktop', 'brave-browser.desktop', 'org.telegram.desktop.desktop', 'com.anthropic.Claude.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop', 'steam.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Resources.desktop', 'discord.desktop', 'chrome-meaaoopkcbjnhdacooldbdggeegehocd-Default.desktop', 'chrome-fgapdjegmkjecndmglfokhnbgjdegajo-Default.desktop']
+favorite-apps=['com.mitchellh.ghostty.desktop', 'com.microsoft.VSCode.desktop', 'brave-browser.desktop', 'org.telegram.desktop.desktop', 'com.anthropic.Claude.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop', 'steam.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Resources.desktop', 'discord.desktop', 'chrome-meaaoopkcbjnhdacooldbdggeegehocd-Default.desktop', 'chrome-fgapdjegmkjecndmglfokhnbgjdegajo-Default.desktop', 'chrome-jpgjhpldbgbfamogmilmefflplfcldij-Default.desktop']
 last-selected-power-profile='power-saver'
 welcome-dialog-last-shown-version='50.3'
 
@@ -372,24 +375,52 @@ welcome-dialog-last-shown-version='50.3'
 current-workspace-only=true
 
 [org/gnome/shell/extensions/blur-my-shell]
-pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_635b932b-5f5a-4cce-9583-87095bc3d7fa'>, 'params': <@a{sv} {}>}>]>}}
+pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_635b932b-5f5a-4cce-9583-87095bc3d7fa'>, 'params': <@a{sv} {}>}>]>}, 'pipeline_liquid_glass': {'name': <'Liquid Glass'>, 'effects': <[<{'type': <'luminosity'>, 'id': <'effect_liquid_glass_luminosity'>, 'params': <{'saturation_multiplicator': <1.1000000000000001>}>}>, <{'type': <'refraction'>, 'id': <'effect_liquid_glass_refraction'>, 'params': <{'tint': <0>}>}>, <{'type': <'noise'>, 'id': <'effect_liquid_glass_noise'>, 'params': <{'noise': <0.10000000000000001>}>}>]>}, 'pipeline_vapor_glass': {'name': <'Vapor Glass'>, 'effects': <[<{'type': <'luminosity'>, 'id': <'effect_vapor_glass_luminosity'>, 'params': <{'saturation_multiplicator': <1.1000000000000001>}>}>, <{'type': <'wave'>, 'id': <'effect_vapor_glass_wave'>, 'params': <@a{sv} {}>}>, <{'type': <'refraction'>, 'id': <'effect_vapor_glass_refraction'>, 'params': <{'tint': <0>}>}>, <{'type': <'noise'>, 'id': <'effect_vapor_glass_noise'>, 'params': <{'noise': <0.10000000000000001>}>}>]>}, 'pipeline_classic_light_background': {'name': <'Classic Light Background'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_classic_light_blur'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.59999999999999998>}>}>, <{'type': <'color'>, 'id': <'effect_classic_light_color'>, 'params': <{'color': <(1.0, 1.0, 1.0, 0.25)>, 'blend_mode': <17>}>}>]>}, 'pipeline_classic_dark_background': {'name': <'Classic Dark Background'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_classic_dark_blur'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.59999999999999998>}>}>, <{'type': <'color'>, 'id': <'effect_classic_dark_color'>, 'params': <{'color': <(0.40000000000000002, 0.40000000000000002, 0.40000000000000002, 0.34999999999999998)>, 'blend_mode': <17>}>}>]>}}
 rounded-blur-found=false
-settings-version=7
+settings-version=8
+
+[org/gnome/shell/extensions/blur-my-shell/appfolder]
+pipeline='pipeline_default'
 
 [org/gnome/shell/extensions/blur-my-shell/applications]
+pipeline='pipeline_default'
 static-blur=false
 
+[org/gnome/shell/extensions/blur-my-shell/coverflow-alt-tab]
+pipeline='pipeline_default'
+
 [org/gnome/shell/extensions/blur-my-shell/dash-to-dock]
+pipeline='pipeline_default'
 style-dash-to-dock=3
 unblur-in-overview=false
 
+[org/gnome/shell/extensions/blur-my-shell/dash-to-panel]
+blur-original-panel=true
+
+[org/gnome/shell/extensions/blur-my-shell/hidetopbar]
+compatibility=false
+
+[org/gnome/shell/extensions/blur-my-shell/lockscreen]
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/overview]
+pipeline='pipeline_default'
+
 [org/gnome/shell/extensions/blur-my-shell/panel]
 force-light-text=false
+pipeline='pipeline_default'
 static-blur=true
-unblur-in-overview=false
+unblur-in-overview=true
 
 [org/gnome/shell/extensions/blur-my-shell/popup]
-static-blur=false
+pipeline='pipeline_default'
+static-blur=true
+
+[org/gnome/shell/extensions/blur-my-shell/screenshot]
+pipeline='pipeline_default'
+
+[org/gnome/shell/extensions/blur-my-shell/window-list]
+pipeline='pipeline_default'
 
 [org/gnome/shell/extensions/clipboard-indicator]
 blink-icon-on-copy=false

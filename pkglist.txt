@@ -20,7 +20,6 @@ chwd
 claude-desktop
 cpupower
 decibels
-discord
 docker
 docker-buildx
 docker-compose
@@ -56,6 +55,7 @@ lib32-gamemode
 lib32-mangohud
 lib32-opencl-nvidia
 libnma
+libreoffice-fresh
 libva-nvidia-driver
 libxnvctrl
 linux-cachyos-headers
