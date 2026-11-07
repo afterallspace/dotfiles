@@ -48,7 +48,7 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
 - **GPU:** NVIDIA RTX 2050 Mobile + Intel Iris Xe (hybrid, `nvidia-prime`)
 - **Display:** 4K OLED
 - **Storage:** Kingston FURY Renegade 2 TB, btrfs + zstd
-- **Kernel:** `linux-cachyos` 7.1 (with `linux-cachyos-lts` as fallback)
+- **Kernel:** `linux-cachyos`
 
 ## 🛠 Tech Stack
 

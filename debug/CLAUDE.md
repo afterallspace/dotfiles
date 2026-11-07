@@ -15,7 +15,7 @@ oddity as a kernel or driver bug, check whether it is ACPI again.
 
 Configuration: RTX 2050 + Intel Alder Lake-P, hybrid graphics, btrfs with
 `compress=zstd:1` on an NVMe Kingston FURY Renegade 2 TB, GNOME on Wayland, fish
-shell, kernels `linux-cachyos` and `linux-cachyos-lts`.
+shell, kernel `linux-cachyos`.
 
 ## How work is done here
 
