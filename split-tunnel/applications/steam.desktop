@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=Steam
 Comment=Application for managing and playing games on Steam (outside Mullvad tunnel)
-Exec=/usr/bin/mullvad-exclude /usr/bin/steam %U
+# Vulkan default device = RTX 2050, so Steam pre-compiles shaders (fossilize_replay) for it, not the iGPU
+Exec=/usr/bin/mullvad-exclude /usr/bin/env MESA_VK_DEVICE_SELECT=10de:25a9 /usr/bin/steam %U
 Icon=steam
 Terminal=false
 Type=Application
@@ -13,36 +14,36 @@ Actions=Store;Community;Library;Servers;Screenshots;News;Settings;BigPicture;Fri
 
 [Desktop Action Store]
 Name=Store
-Exec=/usr/bin/mullvad-exclude /usr/bin/steam steam://store
+Exec=/usr/bin/mullvad-exclude /usr/bin/env MESA_VK_DEVICE_SELECT=10de:25a9 /usr/bin/steam steam://store
 
 [Desktop Action Community]
 Name=Community
-Exec=/usr/bin/mullvad-exclude /usr/bin/steam steam://url/CommunityHome/
+Exec=/usr/bin/mullvad-exclude /usr/bin/env MESA_VK_DEVICE_SELECT=10de:25a9 /usr/bin/steam steam://url/CommunityHome/
 
 [Desktop Action Library]
 Name=Library
-Exec=/usr/bin/mullvad-exclude /usr/bin/steam steam://open/games
+Exec=/usr/bin/mullvad-exclude /usr/bin/env MESA_VK_DEVICE_SELECT=10de:25a9 /usr/bin/steam steam://open/games
 
 [Desktop Action Servers]
 Name=Servers
-Exec=/usr/bin/mullvad-exclude /usr/bin/steam steam://open/servers
+Exec=/usr/bin/mullvad-exclude /usr/bin/env MESA_VK_DEVICE_SELECT=10de:25a9 /usr/bin/steam steam://open/servers
 
 [Desktop Action Screenshots]
 Name=Screenshots
-Exec=/usr/bin/mullvad-exclude /usr/bin/steam steam://open/screenshots
+Exec=/usr/bin/mullvad-exclude /usr/bin/env MESA_VK_DEVICE_SELECT=10de:25a9 /usr/bin/steam steam://open/screenshots
 
 [Desktop Action News]
 Name=News
-Exec=/usr/bin/mullvad-exclude /usr/bin/steam steam://openurl/https://store.steampowered.com/news
+Exec=/usr/bin/mullvad-exclude /usr/bin/env MESA_VK_DEVICE_SELECT=10de:25a9 /usr/bin/steam steam://openurl/https://store.steampowered.com/news
 
 [Desktop Action Settings]
 Name=Settings
-Exec=/usr/bin/mullvad-exclude /usr/bin/steam steam://open/settings
+Exec=/usr/bin/mullvad-exclude /usr/bin/env MESA_VK_DEVICE_SELECT=10de:25a9 /usr/bin/steam steam://open/settings
 
 [Desktop Action BigPicture]
 Name=Big Picture
-Exec=/usr/bin/mullvad-exclude /usr/bin/steam steam://open/bigpicture
+Exec=/usr/bin/mullvad-exclude /usr/bin/env MESA_VK_DEVICE_SELECT=10de:25a9 /usr/bin/steam steam://open/bigpicture
 
 [Desktop Action Friends]
 Name=Friends
-Exec=/usr/bin/mullvad-exclude /usr/bin/steam steam://open/friends
+Exec=/usr/bin/mullvad-exclude /usr/bin/env MESA_VK_DEVICE_SELECT=10de:25a9 /usr/bin/steam steam://open/friends
