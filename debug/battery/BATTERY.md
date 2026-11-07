@@ -214,6 +214,39 @@ The branch is closed, but the Aug 3 conclusion ("the ACPI dumps have no such
 method") turned out right in outcome and wrong in reasoning — the interface is in
 the dumps, we just searched for the wrong word.
 
+### Confirmed by measuring the current (2026-11-07)
+
+A check that August never did: write the limit and watch whether charging stops.
+In August `chargelimit.sh set` died on its status check before sending a non-zero
+code, so "not implemented" rested only on the handler's silence. The prompt was
+[XIAOMI-battery-limiter.rc](https://github.com/AlekseyIrlik/XIAOMI-battery-limiter.rc),
+the Arch Wiki recipe for the RedmiBook Pro 16 2025 rewritten in Rust.
+
+The same calls byte for byte, with the adapter plugged in, sent with
+`archive/chargelimit.sh raw`:
+
+```
+SET 0x10/02 code 0x01 (80%)   OUT 00 10 02 00 01 00 00 00 … fb
+GET 0x10/02                   OUT 00 10 02 00 00 00 00 00 … fa
+GET 0x10/02                   OUT 00 10 02 00 00 00 00 00 … fa
+```
+
+**The limit has no effect, a reliable finding** (one session, nothing rebooted).
+Charge went from 78% through 80% to 82%, status `Charging`, 14.4 W still
+flowing. The firmware keeps nothing either: right after writing code `0x01` the read
+returns the `0x00` that was sent with it, not the stored code.
+
+⚠ **Correction to the sections below.** `OUT[k] = IN[(k+2) mod 32]` is probably not a
+defect. It matches the "echo dialect" that
+[XiControl](https://github.com/Oksion/XiControl/blob/main/docs/01-wmi-protocol.md)
+documents on the TM2113 (Redmi Book Pro 15 2022): no status byte, `OUT[1]` echoes the
+command, `OUT[2]` the argument. Group `0x10` is not implemented there either, and the
+owner of that machine confirmed it. So "no `0x80`/`0xE0` was ever written" does not
+show a dead handler by itself, and the current is what closes this question.
+
+To re-check on a new BIOS: charge below the limit, adapter in, the three calls above,
+then watch `status` and `power_now`. Undo with `raw 0xFB 0x10 0x02 0x00`, twice.
+
 ### What was wrong with the original premise
 
 An analysis done from Windows claimed that there is no `WMID` object, only `MIFS`,
@@ -317,7 +350,9 @@ than the 2022 model.
 **1. A round-trip defect through `WMIB`.** The field is declared as 256 bits with
 `AnyAcc` at an offset of 8 bits from the start of the region, and a "write → read"
 pass does not preserve the data (a rotation by 2 bytes). Region: `SystemMemory`
-`0x44A61000`, 42 bytes, lies in `ACPI NVS` right after the FACS table.
+`0x44A61000`, 42 bytes, lies in `ACPI NVS` right after the FACS table. ⚠ **Probably
+a misreading, corrected Nov 7**: the rotation matches the firmware's echo dialect, see
+"Confirmed by measuring the current" above.
 
 **2. The `bitland-mifs-wmi` kernel driver lies instead of reporting an error.**
 Because of the defect above it receives zeros and reports them as valid values,
@@ -365,8 +400,12 @@ From Linux — almost nothing, there is no limit interface. What remains:
    in the main investigation. After Aug 5 this item became concrete: what needs
    fixing is not "ACPI in general" but the SMI handler of group `0x10` and the
    `WMIB` field. To check a new BIOS: `archive/chargelimit.sh diag` and `smi`.
-4. ~~Set a limit through the `WMAA` ACPI call~~ — **closed Aug 5**, the firmware
-   does not implement the function. Analysis above.
+4. ~~Set a limit through the `WMAA` ACPI call~~ — **closed Aug 5, confirmed by
+   measuring the current on Nov 7**, the firmware does not implement the function.
+   Analysis above.
+5. **From outside the laptop**: a reminder to unplug at 80%, which is what XiControl
+   falls back to on models without a limit, or a smart plug that really cuts the
+   power at a threshold. Neither is set up yet.
 
 **What really helped, unlike the limit:** the RTD3 rollback gave 16.13 → 11.45 W,
 that is, +62 minutes of battery life (section above). Less draw means less heat next

@@ -12,7 +12,7 @@ here grow from that — power, UCSI, missing interfaces.
 | Directory | Topic | Status |
 |---|---|---|
 | [gpu/](gpu/README.md) | RTX 2050 choked to 16 W instead of 35 | **closed Aug 15**: the automation works, telemetry stopped, summary in [SOLUTION.md](gpu/SOLUTION.md). Review Oct 21: on driver 615.78 the lock is alive, do not disable the service |
-| [battery/](battery/BATTERY.md) | battery wear of 42% after 2.5 years | **active**: building the trend (since Oct 21 by itself, `batlog.timer`; 57% health, no acceleration). The "charge limit" sub-question is **closed Aug 5** — the firmware cannot do it |
+| [battery/](battery/BATTERY.md) | battery wear of 42% after 2.5 years | **active**: building the trend (since Oct 21 by itself, `batlog.timer`; 57% health, no acceleration). The "charge limit" sub-question is **closed Aug 5, confirmed by measuring the current on Nov 7** — the firmware cannot do it |
 | [nvme/](nvme/NVME.md) | Power Cycles counter at 130k with 6k hours | **closed Aug 3**, the counter is fine, the drive is healthy |
 
 ## Where to start

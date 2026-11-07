@@ -16,7 +16,10 @@ but does not implement command group `0x10` (charge protection). Proved by a
 chain: the method is called → the write to shared memory arrives (`CTID`/`MTID`
 read back) → an SMI is generated (`MSR 0x34` gives +1 per call against a zero
 background) → a response is never written. The full analysis is in
-`../BATTERY.md`, section "Charge limit: investigation closed".
+`../BATTERY.md`, section "Charge limit: investigation closed". Confirmed on
+2026-11-07 by the current: with the limit written, charging went straight through it.
+That test used `raw`, because `set` dies on its status check on this firmware before
+it sends a non-zero code.
 
 **Why it is worth keeping:**
 
