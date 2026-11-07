@@ -84,6 +84,9 @@ interface — see [`debug/battery/`](debug/battery/BATTERY.md).
   tunnel, linked into `~/.local` by `split-tunnel/install.sh`.
 - `git/` — global git config and ignore list.
 - `backgrounds/` — the wallpaper `gnome-settings.dconf` points at.
+- `nvidia/` — driver application profiles for
+  `~/.nv/nvidia-application-profiles-rc.d`; lifts the CUDA stable-perf limit
+  for `gpu-screen-recorder`.
 - `monitors.xml`, `user-dirs.dirs`, `xdg-terminals.list` —
   session bits that are tedious to recreate by hand.
 - `gnome-settings.dconf` — full dconf dump. This is where the actual GNOME
@@ -138,13 +141,14 @@ the live config. To read the other branch, use `git show hyprland:<path>`.
    ```
 
    Then link the Shell extensions and split-tunnel launchers, restore the
-   wallpaper, build the SVG cursor theme GNOME 51 needs, hide the listed
-   launchers from the app grid, apply the login screen and system settings,
-   enable the system services and reboot:
+   wallpaper and the NVIDIA driver profiles, build the SVG cursor theme
+   GNOME 51 needs, hide the listed launchers from the app grid, apply the
+   login screen and system settings, enable the system services and reboot:
    ```bash
    ~/.config/gnome-extensions/install.sh
    ~/.config/split-tunnel/install.sh
    install -Dm644 -t ~/.local/share/backgrounds ~/.config/backgrounds/*
+   install -Dm644 -t ~/.nv/nvidia-application-profiles-rc.d ~/.config/nvidia/*
    ~/.config/scripts/bibata-scalable.py
    ~/.config/scripts/hide-apps.sh
    sudo ~/.config/gdm/apply.sh
